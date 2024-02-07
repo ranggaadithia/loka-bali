@@ -6,4 +6,4 @@ setelah clone jalankan
 ## Running
 setiap ingin mengerjakan project selalu jalankan 
 
-`npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch`
+`npm run dev`
