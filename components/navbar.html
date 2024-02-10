@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Bali</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../src/css/style.css" />
+
+    <!-- alpinejs -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <div class="fixed w-full top-0 z-50">
+      <nav
+        x-data="{ isDestinationOpen: false, isItenaryOpen: false}"
+        @mouseover.away="isDestinationOpen = false; isItenaryOpen = false"
+        x-transition.duration.300ms
+        class="bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black"
+      >
+        <div class="flex justify-between items-center">
+          <div class="">
+            <a href="#">
+              <h1 class="font-title text-3xl">Loka Bali</h1>
+            </a>
+          </div>
+          <ul
+            class="gap-x-7 text-lg font-semibold font-subtitle hidden lg:flex"
+          >
+            <li>
+              <a
+                @mouseover="isDestinationOpen = true"
+                @mouseleave="isDestinationOpen = false"
+                @click.prevent="isDestinationOpen = true"
+                href=""
+                class="hover:underline hover:decoration-primary hover:underline-offset-8 hover:font-extrabold"
+                >Loka Destinations</a
+              >
+            </li>
+            <li>
+              <a
+                @mouseover="isItenaryOpen = true"
+                @mouseleave="isItenaryOpen = false"
+                @click.prevent="isItenaryOpen = true"
+                href=""
+                class="hover:underline decoration-primary hover:decoration-primary hover:underline-offset-8 hover:font-extrabold"
+                >Loka Itenerary</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-primary hover:underline-offset-8 hover:font-extrabold"
+                >Loka Tips</a
+              >
+            </li>
+          </ul>
+          <ul class="gap-7 text-lg font-subtitle flex">
+            <li>
+              <a
+                href=""
+                class="hover:underline hover:decoration-primary hover:underline-offset-8"
+                >EN <i class="bi bi-globe2"></i
+              ></a>
+            </li>
+            <li class="hidden lg:block">
+              <button
+                class="hover:text-primary transition-color"
+                id="search-button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div
+          @mouseover="isDestinationOpen = true"
+          x-show="isDestinationOpen"
+          x-transition.origin.top.duration.300ms
+          x-transition:leave="transition duration-300 ease-in-out"
+          id="destination"
+          class="px-20 pt-8 flex justify-between items-center"
+        >
+          <ul class="font-subtitle flex flex-col gap-y-1 text-lg">
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-emerald-600"
+                  ><b>Denpasar:</b> Gateway to Bali</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Ubud:</b> Art Village</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Kuta:</b> Bali's Beach Playground</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Seminyak:</b> Trendy Coastal Retreat</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Canggu:</b> Bohemian Surf Town</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Jimbaran:</b> Seafood Haven</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Sanur:</b> Serene Seaside Escape</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Lovina:</b> North Bali's Coastal Gem</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="ubud.html"
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Amed:</b> Bali's Diving Paradise</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+          </ul>
+          <div class="w-1/4">
+            <img
+              src="/src/img/cliff.jpg"
+              class="w-full rounded-xl shadow-md"
+              alt=""
+            />
+            <h3 class="font-body text-sm text-body mt-2">
+              Discover hidden gems and the beauty of nature, uncover
+              destinations unknown to most tourists.
+            </h3>
+          </div>
+        </div>
+        <div
+          @mouseover="isItenaryOpen = true"
+          x-show="isItenaryOpen"
+          x-transition.origin.top.duration.300ms
+          x-transition:leave="transition duration-300 ease-in-out"
+          id="destination"
+          class="px-2 0 pt-8 flex justify-between items-center"
+        >
+          <ul class="font-subtitle flex flex-col gap-y-1 text-lg">
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Bali's Hidden Gems:</b> A Journey Through Nature's
+                  Secrets</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Cultural Marvels of Bali:</b> Exploring Traditions and
+                  Temples</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Bali Eco-Adventure:</b> Discovering the Island's Natural
+                  Wonders</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Bali Bliss:</b> A Day of Relaxation and Exploration</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li></li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Spiritual Sanctuary:</b> Pilgrimage to Bali's Sacred
+                  Sites</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Flavors of Bali:</b> A Culinary Journey Through Local
+                  Delights</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Mountain Majesty:</b> Trekking Through Bali's Volcanic
+                  Landscapes</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center group transition-all duration-300"
+              >
+                <span class="group-hover:text-primary"
+                  ><b>Underwater Wonderland:</b> Exploring Bali's Coral
+                  Gardens</span
+                >
+
+                <i
+                  class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2"
+                ></i>
+              </a>
+            </li>
+          </ul>
+          <div class="w-1/4">
+            <img
+              src="/src/img/cliff.jpg"
+              class="w-full rounded-xl shadow-md"
+              alt=""
+            />
+            <h3 class="font-body text-sm text-body mt-2">
+              Discover hidden gems and the beauty of nature, uncover
+              destinations unknown to most tourists.
+            </h3>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="">
+      <img
+        src="../src/img/jumbotron.jpg"
+        alt=""
+        class="object-center w-screen h-screen object-cover"
+      />
+    </div>
+  </body>
+</html>
