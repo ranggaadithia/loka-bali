@@ -13,10 +13,69 @@
       rel="stylesheet"
     />
 
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
     <!-- styles -->
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <h1 class="text-3xl font-body text-red-500">Hello</h1>
+    <div
+      x-data="{
+        expandedQuestion1: false,
+        expandedQuestion2: false,
+    }"
+      class="mt-8"
+    >
+      <div class="rounded-xl bg-[#F9FAFB]">
+        <div
+          class="flex items-center justify-between px-6 py-4 text-xl font-bold"
+          x-on:click="
+                expandedQuestion1 = !expandedQuestion1;
+                expandedQuestion2 = false;
+            "
+        >
+          <span>Question #1</span>
+          <span x-show="expandedQuestion1" aria-hidden="true" class="ml-4"
+            >&minus;</span
+          >
+          <span x-show="!expandedQuestion1" aria-hidden="true" class="ml-4"
+            >&plus;</span
+          >
+        </div>
+        <div x-show="expandedQuestion1" x-collapse x-transition.origin.top>
+          <div class="px-6 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam
+            quod natus deleniti architecto eaque consequuntur ex, illo neque
+            iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa
+            nulla earum.
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl bg-[#F9FAFB] mt-4">
+        <div
+          class="flex items-center justify-between px-6 py-4 text-xl font-bold"
+          x-on:click="
+                expandedQuestion2 = !expandedQuestion2;
+                expandedQuestion1 = false;
+            "
+        >
+          <span>Question #2</span>
+          <span x-show="expandedQuestion2" aria-hidden="true" class="ml-4"
+            >&minus;</span
+          >
+          <span x-show="!expandedQuestion2" aria-hidden="true" class="ml-4"
+            >&plus;</span
+          >
+        </div>
+        <div x-show="expandedQuestion2" x-collapse>
+          <div class="px-6 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam
+            quod natus deleniti architecto eaque consequuntur ex, illo neque
+            iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa
+            nulla earum.
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
