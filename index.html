@@ -19,61 +19,61 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <div
-      x-data="{
-        expandedQuestion1: false,
-        expandedQuestion2: false,
-    }"
-      class="mt-8"
-    >
-      <div class="rounded-xl bg-[#F9FAFB]">
+    <div class="my-10 px-5 md:px-10 lg:px-20">
+      <div class="grid grid-cols-12 grid-rows-12 gap-4 h-screen">
         <div
-          class="flex items-center justify-between px-6 py-4 text-xl font-bold"
-          x-on:click="
-                expandedQuestion1 = !expandedQuestion1;
-                expandedQuestion2 = false;
-            "
+          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden"
         >
-          <span>Question #1</span>
-          <span x-show="expandedQuestion1" aria-hidden="true" class="ml-4"
-            >&minus;</span
-          >
-          <span x-show="!expandedQuestion1" aria-hidden="true" class="ml-4"
-            >&plus;</span
-          >
+          <img
+            src="/src/img/semar-kuning.jpg"
+            alt=""
+            class="object-cover h-full w-full"
+          />
         </div>
-        <div x-show="expandedQuestion1" x-collapse x-transition.origin.top>
-          <div class="px-6 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam
-            quod natus deleniti architecto eaque consequuntur ex, illo neque
-            iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa
-            nulla earum.
-          </div>
-        </div>
-      </div>
-      <div class="rounded-xl bg-[#F9FAFB] mt-4">
         <div
-          class="flex items-center justify-between px-6 py-4 text-xl font-bold"
-          x-on:click="
-                expandedQuestion2 = !expandedQuestion2;
-                expandedQuestion1 = false;
-            "
+          class="bg-red-300 col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden"
         >
-          <span>Question #2</span>
-          <span x-show="expandedQuestion2" aria-hidden="true" class="ml-4"
-            >&minus;</span
-          >
-          <span x-show="!expandedQuestion2" aria-hidden="true" class="ml-4"
-            >&plus;</span
-          >
+          <img
+            src="/src/img/bangkiang-djaran.jpeg"
+            alt=""
+            class="object-cover h-full w-full"
+          />
         </div>
-        <div x-show="expandedQuestion2" x-collapse>
-          <div class="px-6 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam
-            quod natus deleniti architecto eaque consequuntur ex, illo neque
-            iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa
-            nulla earum.
-          </div>
+        <div
+          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block"
+        >
+          <img
+            src="src/img/gunung-kawi.jpg"
+            alt=""
+            class="object-fill h-full w-full"
+          />
+        </div>
+        <div
+          class="bg-red-300 col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block"
+        >
+          <img
+            src="src/img/tangkup-waterfall.jpeg"
+            alt=""
+            class="object-cover h-full w-full"
+          />
+        </div>
+        <div
+          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block"
+        >
+          <img
+            src="src/img/image2.jpg"
+            alt=""
+            class="object-cover h-full w-full"
+          />
+        </div>
+        <div
+          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden"
+        >
+          <img
+            src="src/img/campuhan-ridge-walk.webp"
+            alt=""
+            class="object-cover h-full w-full"
+          />
         </div>
       </div>
     </div>
