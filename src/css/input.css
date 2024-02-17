@@ -5,3 +5,15 @@
 .nav-active {
   @apply !bg-white !text-black;
 }
+
+.line-pattern {
+  @apply w-[50px] bg-emerald-500 h-[5px] rounded-sm;
+}
+
+.line-pattern::before {
+  @apply content-[''] block w-[20px] bg-emerald-500 h-[5px] rounded-sm ml-[60px];
+}
+
+.line-pattern::after {
+  @apply content-[''] block w-[20px] bg-emerald-500 h-[5px] rounded-sm ml-[-30px] box-border mt-[-5px];
+}

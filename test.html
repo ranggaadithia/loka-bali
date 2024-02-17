@@ -87,7 +87,7 @@
       }"
         @mouseover.away="isDestinationOpen = false; isItenaryOpen = false; isTipsOpen = false; isLangOpen = false;"
         x-transition.duration.300ms
-        :class="isSearchOpen || isNavMobOpen ||onScroll ? 'nav-active bg-transparent py-4 border-b-2 border-primary shadow-lg md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black' : 'bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black'"
+        :class="isSearchOpen || isNavMobOpen ||onScroll ? 'nav-active bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black' : 'bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black'"
       >
         <div class="flex justify-between items-center">
           <!-- brand -->
@@ -133,11 +133,11 @@
             </li>
           </ul>
 
-          <!-- nav-icon -->
+          <!-- icon -->
           <ul class="gap-x-5 md:gap-x-7 text-lg font-subtitle flex">
             <li>
               <button
-                @click="isSearchOpen = !isSearchOpen; isNavMobOpen = false"
+                @click="isSearchOpen = !isSearchOpen"
                 class="hover:text-primary transition-color"
                 id="search-button"
               >
@@ -204,7 +204,7 @@
             <li class="block lg:hidden">
               <button
                 class="hover:text-primary transition-color text-xl"
-                @click="isNavMobOpen = !isNavMobOpen; isSearchOpen = false"
+                @click="isNavMobOpen = !isNavMobOpen"
               >
                 <template x-if="!isNavMobOpen">
                   <i class="bi bi-list"></i>
@@ -334,7 +334,6 @@
 
         <div
           x-show="isSearchOpen"
-          x.transition
           @click.away="isSearchOpen = false"
           @keydown.escape.window="isSearchOpen = false"
           x-data="{
@@ -512,9 +511,9 @@
         </div>
       </nav>
     </div>
-    <!-- navbar end -->
 
     <!-- Jumbotron Edit -->
+
     <div
       class="bg-[url('/src/img/jumbotron-lg.webp')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-gradient-to-b after:from-black/30 -z-10"
     >
@@ -522,7 +521,9 @@
         <p class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10">
           explore
         </p>
-        <h1 class="text-5xl md:text-6xl text-white leading-relaxed font-title">
+        <h1
+          class="text-5xl md:text-6xl text-white leading-relaxed font-title mb-3"
+        >
           Ubud Art Village
         </h1>
         <div class="line-pattern mx-auto"></div>
@@ -536,19 +537,29 @@
 
     <!-- Jumbotron End -->
 
+    <!-- Sticky menu start -->
+    <div
+      class="text-xs -mt-5 rounded-2xl text-center font-subtitle py-2 px-8 border-b border-emerald-300 md:py-5 md:text-lg lg:text-xl lg:py-8 sticky top-0 z-40 bg-white"
+    >
+      <div class="mt-5">
+        Explore > Place to go > Place to eat > Place to stay > Maps > What
+        people says
+      </div>
+    </div>
+    <!-- Sticky menu end -->
+
     <!-- Content start -->
     <div
-      class="flex flex-col md:flex-row justify-center items-center py-14 md:py-24 -mt-5 rounded-2xl px-4 md:px-12 bg-white"
+      class="md:flex justify-center items-center my-7 mx-4 md:mr-20 md:my-10 lg:mr-24 lg:ml-16 lg:my-14 xl:mr-36 xl:ml-24 xl:my-20"
     >
-      <div class="line-pattern -mt-10 mb-10 block md:hidden"></div>
-      <div class="mb-5 w-full md:w-3/5">
+      <div class="md:pr-8 mb-5 lg:pr-11 lg:mb-8 xl:pr-16 xl:mb-12">
         <div
-          class="font-subtitle mb-2 text-xl font-semibold md:text-2xl lg:text-3xl lg:mb-4"
+          class="font-subtitle mb-2 text-lg font-semibold md:text-2xl lg:text-3xl xl:text-4xl lg:mb-4"
         >
           Explore: The iconic art village Ubud
         </div>
         <div
-          class="font-body text-xs text-justify font-extralight lg:text-base"
+          class="font-body text-xs text-justify font-extralight lg:text-sm xl:text-lg"
         >
           Ubud is an iconic art village located in Bali, Indonesia. Renowned for
           its breathtaking natural beauty, Ubud also serves as a hub for arts,
@@ -557,23 +568,23 @@
           as Balinese dance and gamelan music.
         </div>
       </div>
-      <div class="flex justify-center items-center w-full md:w-2/5">
-        <div class="w-52 h-52 lg:w-80 lg:h-80 mySwiperCard">
+      <div class="flex justify-center">
+        <div class="w-52 h-52 lg:h-80 lg:w-80 xl:w-96 xl:h-96 mySwiperCard">
           <div class="swiper-wrapper">
             <div class="swiper-slide rounded-xl">
               <img src="src/img/image1.jpg" alt="" />
             </div>
             <div class="swiper-slide rounded-xl">
-              <img src="src/img/image2.jpg" alt="" loading="lazy" />
+              <img src="src/img/image2.jpg" alt="" />
             </div>
             <div class="swiper-slide rounded-xl">
-              <img src="src/img/image3.jpg" alt="" loading="lazy" />
+              <img src="src/img/image3.jpg" alt="" />
             </div>
             <div class="swiper-slide rounded-xl">
-              <img src="src/img/image4.jpg" alt="" loading="lazy" />
+              <img src="src/img/image4.jpg" alt="" />
             </div>
             <div class="swiper-slide rounded-xl">
-              <img src="src/img/image5.jpg" alt="" loading="lazy" />
+              <img src="src/img/image5.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -582,126 +593,136 @@
     <!-- Content end -->
 
     <!-- Hiddden gems start -->
-    <div
+    <!-- <div
       class="bg-emerald-50 px-7 py-7 relative overflow-hidden -z-20 md:px-10 md:py-10 lg:px-16 lg:py-16 xl:px-20 xl:py-20"
     >
-      <div class="flex justify-start">
-        <div
-          class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
-        >
-          Hidden Gems
-          <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
+      <div class="flex justify-start mb-4">
+        <div class="mb-3 md:mb-4 lg:mb-7">
+          <div
+            class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+          >
+            Hidden Gems
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="src/img/Highlight-Icon.png"
+              alt=""
+              class="w-16 md:w-24 lg:w-32 xl:w-36"
+            />
+          </div>
         </div>
       </div>
-      <div class="grid grid-cols-12 grid-rows-12 gap-4 h-screen my-7">
-        <div
-          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative cursor-pointer group"
-        >
+      <div class="my-10 px-5">
+        <div class="grid grid-cols-12 grid-rows-12 gap-4 h-screen">
           <div
-            class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
-          ></div>
-          <div
-            class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative"
           >
-            Semar Kuning Artist
+            <div
+              class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
+            ></div>
+            <div
+              class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            >
+              Semar Kuning Artist
+            </div>
+            <img
+              src="/src/img/semar-kuning.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
           </div>
-          <img
-            src="/src/img/semar-kuning.jpg"
-            alt=""
-            class="object-cover h-full w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
-          />
-        </div>
-        <div
-          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative"
-        >
           <div
-            class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
-          ></div>
-          <div
-            class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            class="bg-red-300 col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative"
           >
-            Bangkiang Djaran Waterfall
+            <div
+              class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
+            ></div>
+            <div
+              class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            >
+              Bangkiang Djaran Waterfall
+            </div>
+            <img
+              src="/src/img/bangkiang-djaran.jpeg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
           </div>
-          <img
-            src="/src/img/bangkiang-djaran.jpeg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative"
-        >
           <div
-            class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
-          ></div>
-          <div
-            class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            class="bg-red-300 col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative"
           >
-            Gunung Kawi Temple
+            <div
+              class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
+            ></div>
+            <div
+              class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            >
+              Gunung Kawi Temple
+            </div>
+            <img
+              src="src/img/gunung-kawi.jpg"
+              alt=""
+              class="object-fill h-full w-full"
+            />
           </div>
-          <img
-            src="src/img/gunung-kawi.jpg"
-            alt=""
-            class="object-fill h-full w-full"
-          />
-        </div>
-        <div
-          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative"
-        >
           <div
-            class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
-          ></div>
-          <div
-            class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            class="bg-red-300 col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative"
           >
-            Tangkup Waterfall
+            <div
+              class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
+            ></div>
+            <div
+              class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            >
+              Tangkup Waterfall
+            </div>
+            <img
+              src="src/img/tangkup-waterfall.jpeg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
           </div>
-          <img
-            src="src/img/tangkup-waterfall.jpeg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative"
-        >
           <div
-            class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
-          ></div>
-          <div
-            class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            class="bg-red-300 col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative"
           >
-            Jatiluwih
+            <div
+              class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
+            ></div>
+            <div
+              class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            >
+              Jatiluwih
+            </div>
+            <img
+              src="src/img/image2.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
           </div>
-          <img
-            src="src/img/image2.jpg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative"
-        >
           <div
-            class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
-          ></div>
-          <div
-            class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            class="bg-red-300 col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative"
           >
-            Campuhan Ridge Walk
+            <div
+              class="absolute w-full h-full bg-gradient-to-t from-black opacity-80"
+            ></div>
+            <div
+              class="absolute text-white bottom-2 left-3 font-subtitle md:text-lg lg:text-xl"
+            >
+              Campuhan Ridge Walk
+            </div>
+            <img
+              src="src/img/campuhan-ridge-walk.webp"
+              alt=""
+              class="object-cover h-full w-full"
+            />
           </div>
-          <img
-            src="src/img/campuhan-ridge-walk.webp"
-            alt=""
-            class="object-cover h-full w-full"
-          />
         </div>
       </div>
       <div class="flex justify-center">
         <a
           href=""
-          class="font-body text-sm bg-emerald-50 outline outline-strong rounded-md px-2 py-1 md:text-lg lg:text-xl lg:px-4 lg:py-2"
-          >explore more...</a
+          class="font-body text-sm bg-emerald-50 outline rounded-md px-2 py-1 md:text-lg lg:text-xl lg:px-4 lg:py-2"
+          >see more...</a
         >
       </div>
       <img
@@ -714,11 +735,11 @@
         alt=""
         class="opacity-45 absolute -top-16 -right-36 rotate-45 -z-10 md:-top-36 md:-right-64 lg:-top-64 lg:-right-80"
       />
-    </div>
+    </div> -->
     <!-- Hidden gems end -->
 
     <!-- Local flavors start -->
-    <div class="p-7 lg:p-10 xl:p-20">
+    <!-- <div class="p-7 lg:p-10 xl:p-20">
       <div class="flex justify-start mb-4">
         <div class="mb-3 md:mb-4 lg:mb-7">
           <div
@@ -735,7 +756,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper mySwiperGrab overflow-hidden p-5">
+      <div class="mySwiperGrab overflow-hidden p-5">
         <div class="swiper-wrapper">
           <div class="swiper-slide rounded-lg shadow-lg group bg-white">
             <img src="src/img/k-club.png" alt="" class="rounded-t-lg w-full" />
@@ -884,15 +905,13 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div> -->
+        <div class=""></div>
       </div>
-    </div>
+    </div> -->
     <!-- Local flavors end -->
 
     <!-- Local adventure start -->
-    <div class="relative overflow-hidden">
+    <!-- <div class="relative overflow-hidden">
       <div class="p-7 lg:p-10 xl:p-20 bg-emerald-50 relative overflow-hidden">
         <div class="flex justify-start mb-4">
           <div class="mb-3 md:mb-4 lg:mb-7">
@@ -1047,11 +1066,11 @@
           class="absolute hidden lg:block lg:w-1/2 right-0 -bottom-10 opacity-45 md:-bottom-56 lg:-bottom-20"
         />
       </div>
-    </div>
+    </div> -->
     <!-- Local flavors end -->
 
     <!-- Instagram start -->
-    <div
+    <!-- <div
       class="font-subtitle px-7 text-xl font-semibold md:px-10 md:text-2xl lg:text-3xl xl:text-4xl"
     >
       #ubud
@@ -1139,34 +1158,34 @@
           class="w-40 h-40 object-cover md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-64 xl:h-64 rounded-lg"
         />
       </div>
-      <!-- Instagram end -->
+    </div> -->
+    <!-- Instagram end -->
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script>
-        var swiper = new Swiper(".mySwiperCard", {
-          effect: "cards",
-          grabCursor: true,
-        });
-        var swiper = new Swiper(".mySwiperGrab", {
-          slidesPerView: 1,
-          spaceBetween: 15,
-          grabCursor: false,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiperCard", {
+        effect: "cards",
+        grabCursor: true,
+      });
+      var swiper = new Swiper(".mySwiperGrab", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
           },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
-        });
-      </script>
-    </div>
+        },
+      });
+    </script>
   </body>
 </html>
