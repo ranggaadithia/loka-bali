@@ -19,61 +19,99 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <div class="my-10 px-5 md:px-10 lg:px-20">
-      <div class="grid grid-cols-12 grid-rows-12 gap-4 h-screen">
-        <div
-          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden"
-        >
-          <img
-            src="/src/img/semar-kuning.jpg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="bg-red-300 col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden"
-        >
-          <img
-            src="/src/img/bangkiang-djaran.jpeg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block"
-        >
-          <img
-            src="src/img/gunung-kawi.jpg"
-            alt=""
-            class="object-fill h-full w-full"
-          />
-        </div>
-        <div
-          class="bg-red-300 col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block"
-        >
-          <img
-            src="src/img/tangkup-waterfall.jpeg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block"
-        >
-          <img
-            src="src/img/image2.jpg"
-            alt=""
-            class="object-cover h-full w-full"
-          />
-        </div>
-        <div
-          class="bg-red-300 col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden"
-        >
-          <img
-            src="src/img/campuhan-ridge-walk.webp"
-            alt=""
-            class="object-cover h-full w-full"
-          />
+    <div
+      x-data="{
+        expanded: false,
+    }"
+      class="mt-8"
+    >
+      <div class="rounded-xl bg-[#F9FAFB]">
+        <!-- Demo -->
+        <div class="px-5 py-16 min-h-[20rem] flex items-center justify-center">
+          <div
+            x-data="{ xgndgrgxkp: 1 }"
+            class="mx-auto max-w-3xl w-full min-h-[16rem] space-y-4"
+          >
+            <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+            <div
+              x-data="ehczlyothi"
+              role="region"
+              class="rounded-lg bg-white shadow"
+            >
+              <h2>
+                <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                <button
+                  x-on:click="xznzezkapn = !xznzezkapn"
+                  class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+                >
+                  <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                  <span>Question #1</span>
+                  <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                  <span x-show="xznzezkapn" aria-hidden="true" class="ml-4"
+                    >&minus;</span
+                  >
+                  <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                  <span x-show="!xznzezkapn" aria-hidden="true" class="ml-4"
+                    >&plus;</span
+                  >
+                </button>
+              </h2>
+
+              <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+              <div x-show="xznzezkapn" x-collapse>
+                <div class="px-6 pb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                  magnam quod natus deleniti architecto eaque consequuntur ex,
+                  illo neque iste repellendus modi, quasi ipsa commodi saepe?
+                  Provident ipsa nulla earum.
+                </div>
+                <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+              </div>
+            </div>
+            <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+            <div
+              x-data="{
+id: 2,
+get xznzezkapn() {
+return this.xgndgrgxkp === this.id
+},
+set xznzezkapn(value) {
+this.xgndgrgxkp = value ? this.id : null
+},
+}"
+              role="region"
+              class="rounded-lg bg-white shadow"
+            >
+              <h2>
+                <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                <button
+                  x-on:click="xznzezkapn = !xznzezkapn"
+                  class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+                >
+                  <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                  <span>Question #2</span>
+                  <span x-show="xznzezkapn" aria-hidden="true" class="ml-4"
+                    >&minus;</span
+                  >
+                  <span x-show="!xznzezkapn" aria-hidden="true" class="ml-4"
+                    >&plus;</span
+                  >
+                  <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                </button>
+              </h2>
+
+              <div x-show="xznzezkapn" x-collapse>
+                <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+                <div class="px-6 pb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                  magnam quod natus deleniti architecto eaque consequuntur ex,
+                  illo neque iste repellendus modi, quasi ipsa commodi saepe?
+                  Provident ipsa nulla earum.
+                </div>
+                <!-- Copying this code is against the product license. Just buy the dang thing and save yourself the effort. -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
