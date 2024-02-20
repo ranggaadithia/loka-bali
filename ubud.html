@@ -50,8 +50,24 @@
         background-repeat: no-repeat;
         background-position: center !important;
       }
+
+      .swiper-button-prev-adv {
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1L2 8L9 15' stroke='%231D764A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat;
+        background-position: center !important;
+      }
+
+      .swiper-button-next-adv {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='16' viewBox='0 0 10 16' fill='none'%3E%3Cpath d='M1 15L8 8L1 1' stroke='%231D764A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat;
+        background-position: center !important;
+      }
       .swiper-button-next::after,
       .swiper-button-prev::after {
+        display: none !important;
+      }
+      .swiper-button-next-adv::after,
+      .swiper-button-prev-adv::after {
         display: none !important;
       }
       .swiper-pagination-bullet {
@@ -757,7 +773,7 @@
               class="swiper-button-prev !static bg-secondary/20 px-5 rounded-md"
             ></div>
             <div
-              class="swiper-button-next !static bg-secondary/20 px-5 rounded-md"
+              class="swiper-button-next !static bg-secondary/20 px-5 rounded-md swiper-button-disabled"
             ></div>
           </div>
         </div>
@@ -774,7 +790,7 @@
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
             <div
-              class="swiper-slide cursor-pointer mb-5 rounded-lg shadow-lg group bg-white"
+              class="swiper-slide cursor-pointer mb-10 rounded-lg shadow-lg group bg-white"
             >
               <img
                 src="src/img/k-club.png"
@@ -809,8 +825,10 @@
             </div>
           </template>
         </div>
+        <div
+          class="swiper-pagination flex justify-start items-center pt-10 md:hidden"
+        ></div>
       </div>
-      <div class="swiper-pagination block md:hidden"></div>
     </div>
     <!-- Local flavors end -->
 
@@ -828,10 +846,10 @@
           </div>
           <div class="w-24 justify-between items-center hidden md:flex">
             <div
-              class="swiper-button-prev !static bg-white px-5 rounded-md"
+              class="swiper-button-prev-adv !static bg-white p-5 rounded-md"
             ></div>
             <div
-              class="swiper-button-next !static bg-white px-5 rounded-md"
+              class="swiper-button-next-adv !static bg-white p-5 rounded-md block"
             ></div>
           </div>
         </div>
@@ -893,8 +911,8 @@
           alt=""
           class="absolute hidden lg:block lg:w-1/2 right-0 -bottom-10 opacity-45 md:-bottom-56 lg:-bottom-40"
         />
+        <div class="swiper-pagination-adv md:hidden"></div>
       </div>
-      <div class="swiper-pagination block md:hidden"></div>
     </div>
     <!-- Local flavors end -->
 
@@ -1026,12 +1044,12 @@
         spaceBetween: 10,
         grabCursor: false,
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination-adv",
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next-adv",
+          prevEl: ".swiper-button-prev-adv",
         },
         breakpoints: {
           768: {
