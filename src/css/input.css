@@ -45,3 +45,19 @@
   width: 0.6rem;
   height: 0.6rem;
 }
+
+#map {
+  height: 60vh;
+}
+.leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-routing-container {
+  display: none;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #fff;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+}

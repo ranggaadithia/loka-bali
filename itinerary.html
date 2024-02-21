@@ -38,10 +38,33 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- navbar start-->
-    <div class="fixed w-full top-0 z-50">
+    <div class="fixed w-full top-0 z-[999]">
       <nav
         @scroll.window="onScroll = true"
         x-data="{ 
@@ -515,18 +538,310 @@
 
     <!-- Jumbotron Edit -->
     <div
-      class="bg-[url('/src/img/jumbotron-lg.webp')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-gradient-to-b after:from-black/30 -z-10"
+      class="bg-[url('/src/img/lempuyang.webp')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-black/30 -z-10"
     >
       <div class="container mx-auto z-50 text-center">
-        <p class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10">
-          explore
-        </p>
         <h1 class="text-5xl md:text-6xl text-white leading-relaxed font-title">
-          Hidden Gems Bali
+          Spiritual Journey
         </h1>
-        <div class="line-pattern mx-auto"></div>
+        <p class="text-white font-body mt-1 md:mt-3 text-lg font-medium">
+          Exploring Pura and Sacred Sites
+        </p>
+        <div class="line-pattern mx-auto mt-3 md:mt-5"></div>
+        <a
+          href=""
+          class="absolute bottom-10 text-white text-base font-body left-4 md:left-14 z-10"
+          ><i class="bi bi-geo-alt"></i> Lempuyang Temple</a
+        >
       </div>
     </div>
     <!-- Jumbotron End -->
+
+    <!-- Content start -->
+    <div
+      class="container mx-auto px-4 lg:px-20 -mt-5 rounded-2xl lg:rounded-none bg-white"
+    >
+      <h1 class="text-center text-3xl font-title pt-10">Tour Destination</h1>
+      <section id="Tohpati Village">
+        <div class="flex flex-col md:flex-row justify-evenly lg:items-center">
+          <div class="w-full md:w-1/2 md:pr-5 lg:pr-20 order-first">
+            <h3 class="mt-5 text-2xl font-subtitle font-bold lg:text-2xl">
+              Tohpati Village
+            </h3>
+            <div
+              class="w-full md:hidden md:w-1/2 md:p-3 lg:p-6 my-3 overflow-hidden order-last"
+            >
+              <div class="swiper swiperDes w-72 h-72">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide rounded-md">
+                    <img
+                      src="https://mytourbali.com/storage/photos/rbKKdlE3ChmjliK1ABcKkl5IsNsJotWti0C5Lk46.jpg"
+                      alt=""
+                      class="object-cover w-[350px] h-[350px]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide rounded-md">
+                    <img
+                      src="https://mytourbali.com/storage/photos/sfGbwECnlattao5o8TtdMbKOfqfkpokjWupZeBfz.jpg"
+                      alt=""
+                      class="object-cover w-[350px] h-[350px]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide rounded-md">
+                    <img
+                      src="https://mytourbali.com/storage/photos/8xyFO2SoaXqnMKbb3oEvvMwx3KFv7RZ0QGST04an.jpg"
+                      alt=""
+                      class="object-cover w-[350px] h-[350px]"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p
+              class="mt-3 mb-6 mb:mb-5 font-poppins text-gray-600 lg:text-base leading-relaxed font-body"
+            >
+              Center of handmade Balinese Batik with various colors and shapes.
+              Here the visitors will be exhibited the Batik making and hand
+              weaving process. Finally you can buy some to bring home. Batik is
+              one of the most beautiful wearable art and the approach to the
+              other side of Balinese rich culture.
+            </p>
+          </div>
+          <div
+            class="hidden md:w-1/2 md:flex md:items-center md:p-3 lg:p-6 my-5"
+            id="card"
+          >
+            <div class="swiper swiperDes w-80 h-80">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide rounded-md">
+                  <img
+                    src="https://mytourbali.com/storage/photos/rbKKdlE3ChmjliK1ABcKkl5IsNsJotWti0C5Lk46.jpg"
+                    alt=""
+                    class="object-cover w-[350px] h-[350px]"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="swiper-slide rounded-md">
+                  <img
+                    src="https://mytourbali.com/storage/photos/sfGbwECnlattao5o8TtdMbKOfqfkpokjWupZeBfz.jpg"
+                    alt=""
+                    class="object-cover w-[350px] h-[350px]"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="swiper-slide rounded-md">
+                  <img
+                    src="https://mytourbali.com/storage/photos/8xyFO2SoaXqnMKbb3oEvvMwx3KFv7RZ0QGST04an.jpg"
+                    alt=""
+                    class="object-cover w-[350px] h-[350px]"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Tohpati Village">
+        <div class="flex flex-col md:flex-row justify-evenly lg:items-center">
+          <div class="w-full md:w-1/2 md:pr-5 lg:pr-20 order-last">
+            <h3 class="mt-5 text-2xl font-subtitle font-bold lg:text-2xl">
+              Tohpati Village
+            </h3>
+            <div
+              class="w-full md:hidden md:w-1/2 md:p-3 lg:p-6 my-3 overflow-hidden order-first"
+            >
+              <div class="swiper swiperDes w-72 h-72">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide rounded-md">
+                    <img
+                      src="https://mytourbali.com/storage/photos/rbKKdlE3ChmjliK1ABcKkl5IsNsJotWti0C5Lk46.jpg"
+                      alt=""
+                      class="object-cover w-[350px] h-[350px]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide rounded-md">
+                    <img
+                      src="https://mytourbali.com/storage/photos/sfGbwECnlattao5o8TtdMbKOfqfkpokjWupZeBfz.jpg"
+                      alt=""
+                      class="object-cover w-[350px] h-[350px]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide rounded-md">
+                    <img
+                      src="https://mytourbali.com/storage/photos/8xyFO2SoaXqnMKbb3oEvvMwx3KFv7RZ0QGST04an.jpg"
+                      alt=""
+                      class="object-cover w-[350px] h-[350px]"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p
+              class="mt-3 mb-6 mb:mb-5 font-poppins text-gray-600 lg:text-base leading-relaxed font-body"
+            >
+              Center of handmade Balinese Batik with various colors and shapes.
+              Here the visitors will be exhibited the Batik making and hand
+              weaving process. Finally you can buy some to bring home. Batik is
+              one of the most beautiful wearable art and the approach to the
+              other side of Balinese rich culture.
+            </p>
+          </div>
+          <div
+            class="hidden md:w-1/2 md:flex md:items-center md:p-3 lg:p-6 my-5"
+            id="card"
+          >
+            <div class="swiper swiperDes w-80 h-80">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide rounded-md">
+                  <img
+                    src="https://mytourbali.com/storage/photos/rbKKdlE3ChmjliK1ABcKkl5IsNsJotWti0C5Lk46.jpg"
+                    alt=""
+                    class="object-cover w-[350px] h-[350px]"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="swiper-slide rounded-md">
+                  <img
+                    src="https://mytourbali.com/storage/photos/sfGbwECnlattao5o8TtdMbKOfqfkpokjWupZeBfz.jpg"
+                    alt=""
+                    class="object-cover w-[350px] h-[350px]"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="swiper-slide rounded-md">
+                  <img
+                    src="https://mytourbali.com/storage/photos/8xyFO2SoaXqnMKbb3oEvvMwx3KFv7RZ0QGST04an.jpg"
+                    alt=""
+                    class="object-cover w-[350px] h-[350px]"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Content End -->
+
+    <div id="map"></div>
+
+    <div class="mt-96">s</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script>
+      const imageShow = new Swiper(".swiperDes", {
+        effect: "cards",
+        grabCursor: true,
+      });
+
+      var map = L.map("map", {
+        scrollWheelZoom: false,
+      }).setView([-8.4095185, 115.188916], 10);
+
+      var markerIcon = L.icon({
+        iconUrl: "src/img/lempuyang-temple.png",
+        iconSize: [25, 33],
+        iconAnchor: [12, 33],
+      });
+
+      var pura1 = L.marker([-8.656080365483993, 115.21868490998435], {
+        icon: markerIcon,
+      }).addTo(map);
+
+      var pura2 = L.marker([-8.373317846370117, 115.45247037835209], {
+        icon: markerIcon,
+      }).addTo(map);
+
+      var pura3 = L.marker([-8.246314770579076, 115.34003898287557], {
+        icon: markerIcon,
+      }).addTo(map);
+
+      pura1.bindPopup(
+        `<div class="flex flex-col items-center">
+        <img src="src/img/lempuyang.webp" alt="Lempuyang Temple" class="w-full h-40 object-cover rounded-lg mb-2">
+        <div>
+          <h1 class="text-lg font-bold font-subtitle">Lempuyang Temple</h1>
+          <p class="text-sm font-body">Lempuyang Temple, locally referred to as Pura Lempuyang Luhur, is one of Bali’s oldest and most highly regarded temples, on par with Besakih. <button class="text-primary underline underline-offset-1">Read More</button></p>
+        </div>
+      `,
+        {
+          minWidth: 200,
+        }
+      );
+      pura2.bindPopup(
+        `<div class="flex flex-col items-center">
+        <img src="src/img/image4.jpg" alt="Lempuyang Temple" class="w-full h-40 object-cover rounded-lg mb-2">
+        <div>
+          <h1 class="text-lg font-bold font-subtitle">Lempuyang Temple</h1>
+          <p class="text-sm font-body">Lempuyang Temple, locally referred to as Pura Lempuyang Luhur, is one of Bali’s oldest and most highly regarded temples, on par with Besakih. <button class="text-primary underline underline-offset-1">Read More</button></p>
+        </div>
+      `,
+        {
+          minWidth: 200,
+        }
+      );
+      pura3.bindPopup(
+        `<div class="flex flex-col items-center">
+        <img src="src/img/image4.jpg" alt="Lempuyang Temple" class="w-full h-40 object-cover rounded-lg mb-2">
+        <div>
+          <h1 class="text-lg font-bold font-subtitle">Lempuyang Temple</h1>
+          <p class="text-sm font-body">Lempuyang Temple, locally referred to as Pura Lempuyang Luhur, is one of Bali’s oldest and most highly regarded temples, on par with Besakih. <button class="text-primary underline underline-offset-1">Read More</button></p>
+        </div>
+      `,
+        {
+          minWidth: 200,
+        }
+      );
+
+      var control = L.Routing.control({
+        waypoints: [
+          L.latLng(-8.656080365483993, 115.21868490998435),
+          L.latLng(-8.373317846370117, 115.45247037835209),
+          L.latLng(-8.246314770579076, 115.34003898287557),
+        ],
+        lineOptions: {
+          styles: [{ color: "#10B981", opacity: 1, weight: 5 }],
+        },
+        createMarker: function () {
+          return null;
+        },
+      }).addTo(map);
+
+      control.hide();
+
+      var Stadia_StamenTerrain = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+        {
+          minZoom: 0,
+          maxZoom: 18,
+          attribution:
+            '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          ext: "png",
+        }
+      ).addTo(map);
+    </script>
+    <!-- Content end -->
   </body>
 </html>

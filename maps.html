@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <style>
+    #map {
+      height: 90vh;
+    }
+    .leaflet-control-zoom {
+      display: none;
+    }
+    .leaflet-control-attribution {
+      display: none;
+    }
+
+    .leaflet-routing-container {
+      display: none;
+    }
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
+      background: #fff;
+      box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <body>
+    <div id="map"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script>
+      var map = L.map("map").setView([-8.4095185, 115.188916], 10);
+
+      var markerIcon = L.icon({
+        iconUrl: "src/img/lempuyang-temple.png",
+        iconSize: [25, 33],
+        iconAnchor: [12, 33],
+      });
+
+      var pura1 = L.marker([-8.656080365483993, 115.21868490998435], {
+        icon: markerIcon,
+      }).addTo(map);
+
+      var pura2 = L.marker([-8.373317846370117, 115.45247037835209], {
+        icon: markerIcon,
+      }).addTo(map);
+
+      var pura3 = L.marker([-8.246314770579076, 115.34003898287557], {
+        icon: markerIcon,
+      }).addTo(map);
+
+      pura1.bindPopup(
+        `<div class="flex flex-col items-center">
+          <img src="src/img/lempuyang.webp" alt="Lempuyang Temple" class="w-full h-40 object-cover rounded-lg mb-2">
+          <div>
+            <h1 class="text-lg font-bold font-subtitle">Lempuyang Temple</h1>
+            <p class="text-sm font-body">Lempuyang Temple, locally referred to as Pura Lempuyang Luhur, is one of Bali’s oldest and most highly regarded temples, on par with Besakih. <button class="text-primary underline underline-offset-1">Read More</button></p>
+          </div>
+        `,
+        {
+          minWidth: 200,
+        }
+      );
+      pura2.bindPopup(
+        `<div class="flex flex-col items-center">
+          <img src="src/img/image4.jpg" alt="Lempuyang Temple" class="w-full h-40 object-cover rounded-lg mb-2">
+          <div>
+            <h1 class="text-lg font-bold font-subtitle">Lempuyang Temple</h1>
+            <p class="text-sm font-body">Lempuyang Temple, locally referred to as Pura Lempuyang Luhur, is one of Bali’s oldest and most highly regarded temples, on par with Besakih. <button class="text-primary underline underline-offset-1">Read More</button></p>
+          </div>
+        `,
+        {
+          minWidth: 200,
+        }
+      );
+      pura3.bindPopup(
+        `<div class="flex flex-col items-center">
+          <img src="src/img/image4.jpg" alt="Lempuyang Temple" class="w-full h-40 object-cover rounded-lg mb-2">
+          <div>
+            <h1 class="text-lg font-bold font-subtitle">Lempuyang Temple</h1>
+            <p class="text-sm font-body">Lempuyang Temple, locally referred to as Pura Lempuyang Luhur, is one of Bali’s oldest and most highly regarded temples, on par with Besakih. <button class="text-primary underline underline-offset-1">Read More</button></p>
+          </div>
+        `,
+        {
+          minWidth: 200,
+        }
+      );
+
+      var control = L.Routing.control({
+        waypoints: [
+          L.latLng(-8.656080365483993, 115.21868490998435),
+          L.latLng(-8.373317846370117, 115.45247037835209),
+          L.latLng(-8.246314770579076, 115.34003898287557),
+        ],
+        lineOptions: {
+          styles: [{ color: "#10B981", opacity: 1, weight: 5 }],
+        },
+        createMarker: function () {
+          return null;
+        },
+      }).addTo(map);
+
+      control.hide();
+
+      var Stadia_StamenTerrain = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+        {
+          minZoom: 0,
+          maxZoom: 18,
+          attribution:
+            '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          ext: "png",
+        }
+      ).addTo(map);
+    </script>
+  </body>
+</html>
