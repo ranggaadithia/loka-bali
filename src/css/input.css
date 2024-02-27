@@ -61,3 +61,18 @@
   background: #fff;
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(155, 155, 155, 0.1);
+  border-radius: 10px;
+}

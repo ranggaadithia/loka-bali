@@ -62,27 +62,12 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <style>
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: rgba(155, 155, 155, 0.5);
-        border-radius: 10px;
-      }
-
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background-color: rgba(155, 155, 155, 0.1);
-        border-radius: 10px;
-      }
-    </style>
+    <style></style>
   </head>
   <body class="font-body custom-scrollbar leading-relaxed relative">
     <!-- navbar start-->
     <div
-      class="fixed w-full top-0 z-[999] transition-all duration-500 ease-in-out"
+      class="navbar fixed w-full top-0 z-[999] transition-all duration-500 ease-in-out"
     >
       <nav
         @scroll.window="onScroll = true"
@@ -362,7 +347,7 @@
           </ul>
           <div class="w-1/4">
             <img
-              src="/src/img/ngaben.jpg"
+              src="/src/img/people.jpg"
               class="w-full rounded-xl shadow-md h-48 object-cover object-center"
               alt=""
             />
@@ -691,35 +676,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script src="./src/js/script.js"></script>
     <script>
       const imageShow = new Swiper(".swiperDes", {
         effect: "cards",
         grabCursor: true,
       });
       // Simpan posisi scroll sebelumnya
-      let lastScrollTop = 0;
-
-      // Select navbar
-      const navbar = document.querySelector(".fixed");
-
-      // Tambahkan event listener untuk mendeteksi scroll
-      window.addEventListener("scroll", function () {
-        // Dapatkan posisi scroll saat ini
-        let scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        // Tentukan arah scroll
-        if (scrollTop > lastScrollTop) {
-          // Scroll ke bawah, sembunyikan navbar
-          navbar.style.top = "-100px"; // Menggunakan nilai negatif untuk menyembunyikan navbar
-        } else {
-          // Scroll ke atas, tampilkan navbar kembali
-          navbar.style.top = "0";
-        }
-
-        // Simpan posisi scroll saat ini untuk perbandingan di scroll selanjutnya
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
     </script>
   </body>
 </html>
