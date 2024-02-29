@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ubud</title>
+    <title>Loka Bali | Ubud</title>
+
+        <!-- favicon -->
+        <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="ico/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="ico/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="ico/favicon-16x16.png"
+      />
+      <link rel="manifest" href="ico/site.webmanifest" />
+      <!-- end favicon -->
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,60 +61,63 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="src/js/script.js">
   </head>
-  <body class="bg-white">
+  <body class="bg-white custom-scrollbar">
     <!-- navbar start-->
-    <div class="fixed w-full top-0 z-50">
+    <div
+      class="navbar fixed w-full top-0 z-[999] transition-all duration-1000 ease-in-out"
+    >
       <nav
         @scroll.window="onScroll = true"
         x-data="{ 
-        isDestinationOpen: false, 
-        onScroll: false,
-        isItenaryOpen: false, 
-        isTipsOpen: false,
-        isLangOpen: false,
-        isSearchOpen: false,
-        isNavMobOpen: false,
-        destinations: {
-          'Denpasar\:': 'Gateway to Bali', 
-          'Ubud\:': 'Art Village', 
-          'Kuta\:': 'Bali\'s Beach Playground', 
-          'Seminyak\:': 'Trendy Coastal Retreat', 
-          'Canggu\:': 'Bohemian Surf Town', 
-          'Jimbaran\:': 'Seafood Haven', 
-          'Sanur\:': 'Serene Seaside Escape', 
-          'Lovina\:': 'North Bali\'s Coastal Gem', 
-          'Amed\:': 'Bali\'s Diving Paradise'
-        },
-        itineraries: {
-          'Bali\'s Hidden Gems\:': 'A Journey Through Nature\'s Secrets', 
-          'Cultural Marvels of Bali\:': 'Exploring Traditions and Temples', 
-          'Bali Eco-Adventure\:': 'Discovering the Island\'s Natural Wonders', 
-          'Bali Bliss\:': 'A Day of Relaxation and Exploration', 
-          'Spiritual Sanctuary\:': 'Pilgrimage to Bali\'s Sacred Sites', 
-          'Flavors of Bali\:': 'A Culinary Journey Through Local Delights', 
-          'Mountain Majesty\:': 'Trekking Through Bali\'s Volcanic Landscapes', 
-          'Underwater Wonderland\:': 'Exploring Bali\'s Coral Gardens'
-        },
-        tips: {
-          'Travel Tips\:': 'Essential Information for Your Bali Trip', 
-          'Find Hidden Gems\:': 'Discovering Bali\'s Off-the-Beaten-Path',
-          'Find the Best Guides\:': 'Connecting with Bali\'s Local Experts',
-          'Todays Ceremony and Festivals\:': 'Joining Bali\'s Cultural Celebrations',
-          'Bali\'s Nightlife\:': 'The Island\'s Best Nightlife Spots', 
-          'Bali\'s Shopping\:': 'Where to Find the Best Souvenirs', 
-          'Bali\'s Wellness\:': 'The Island\'s Best Spas and Yoga Studios', 
-          'Bali\'s Adventure\:': 'The Island\'s Best Outdoor Activities', 
-        }
-      }"
+         isDestinationOpen: false, 
+         onScroll: false,
+         isItenaryOpen: false, 
+         isTipsOpen: false,
+         isLangOpen: false,
+         isSearchOpen: false,
+         isNavMobOpen: false,
+         destinations: {
+           'Denpasar\:': 'Gateway to Bali', 
+           'Ubud\:': 'Art Village', 
+           'Kuta\:': 'Bali\'s Beach Playground', 
+           'Seminyak\:': 'Trendy Coastal Retreat', 
+           'Canggu\:': 'Bohemian Surf Town', 
+           'Jimbaran\:': 'Seafood Haven', 
+           'Sanur\:': 'Serene Seaside Escape', 
+           'Lovina\:': 'North Bali\'s Coastal Gem', 
+           'Amed\:': 'Bali\'s Diving Paradise'
+         },
+         itineraries: {
+           'Bali\'s Hidden Gems': ': A Journey Through Nature\'s Secrets', 
+           'Cultural Marvels of Bali': ': Exploring Traditions and Temples', 
+           'Bali Eco-Adventure': ': Discovering the Island\'s Natural Wonders', 
+           'Bali Bliss': ': A Day of Relaxation and Exploration', 
+           'Spiritual Sanctuary': ': Pilgrimage to Bali\'s Sacred Sites', 
+           'Flavors of Bali': ': A Culinary Journey Through Local Delights', 
+           'Mountain Majesty': ': Trekking Through Bali\'s Volcanic Landscapes', 
+           'Underwater Wonderland': ': Exploring Bali\'s Coral Gardens'
+         },
+         tips: {
+           'Travel Tips': ': Essential Information for Your Bali Trip', 
+           'Find Hidden Gems': ': Discovering Bali\'s Off-the-Beaten-Path',
+           'Find the Best Guides': ': Connecting with Bali\'s Local Experts',
+           'Todays Ceremony and Festivals': ': Joining Bali\'s Cultural Celebrations',
+           'Bali\'s Nightlife': ': The Island\'s Best Nightlife Spots', 
+           'Bali\'s Shopping': ': Where to Find the Best Souvenirs', 
+           'Bali\'s Wellness': ': The Island\'s Best Spas and Yoga Studios', 
+           'Bali\'s Adventure': ': The Island\'s Best Outdoor Activities', 
+         }
+       }"
         @mouseover.away="isDestinationOpen = false; isItenaryOpen = false; isTipsOpen = false; isLangOpen = false;"
         x-transition.duration.300ms
-        :class="isSearchOpen || isNavMobOpen ||onScroll ? 'nav-active bg-transparent py-4 border-b-2 border-primary shadow-lg md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black' : 'bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black'"
+        :class="isSearchOpen || isNavMobOpen ||onScroll ? 'nav-active bg-transparent py-4 border-b-2 border md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black' : 'bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black'"
       >
         <div class="flex justify-between items-center">
           <!-- brand -->
           <div class="">
-            <a href="#">
+            <a href="index.html">
               <h1 class="font-title text-3xl">Loka Bali</h1>
             </a>
           </div>
@@ -246,6 +271,7 @@
           <div class="w-1/4">
             <img
               src="/src/img/cliff.jpg"
+              loading="lazy"
               class="w-full rounded-xl shadow-md"
               alt=""
             />
@@ -268,11 +294,11 @@
             <template x-for="(description, name) in itineraries">
               <li>
                 <a
-                  href="ubud.html"
+                  href="itinerary.html"
                   class="flex group items-center transition-all duration-200 hover:text-emerald-600"
                 >
                   <span class="font-bold" x-text="name"></span>
-                  <span class="ml-1" x-text="description"> ></span>
+                  <span x-text="description"> ></span>
 
                   <i
                     class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2 transition-all duration-200"
@@ -284,6 +310,7 @@
           <div class="w-1/4">
             <img
               src="/src/img/tips.jpg"
+              loading="lazy"
               class="w-full rounded-xl shadow-md object-cover object-center"
               alt=""
             />
@@ -306,11 +333,11 @@
             <template x-for="(description, name) in tips">
               <li>
                 <a
-                  href="ubud.html"
+                  href="blog.html"
                   class="flex group items-center transition-all duration-200 hover:text-emerald-600"
                 >
                   <span class="font-bold" x-text="name"></span>
-                  <span class="ml-1" x-text="description"> ></span>
+                  <span x-text="description"> ></span>
 
                   <i
                     class="bi bi-arrow-right-short text-2xl ml-1 text-primary group-hover:ml-2 transition-all duration-200"
@@ -321,13 +348,14 @@
           </ul>
           <div class="w-1/4">
             <img
-              src="/src/img/ngaben.jpg"
+              src="/src/img/people.jpg"
+              loading="lazy"
               class="w-full rounded-xl shadow-md h-48 object-cover object-center"
               alt=""
             />
             <h3 class="font-body text-sm text-body mt-2">
-              Recomendation of itineraries to explore Bali, from cultural to eco
-              adventure.
+              Find the best tips and recommendation to explore Bali, from travel
+              tips to hidden gems.
             </h3>
           </div>
         </div>
@@ -338,27 +366,27 @@
           @click.away="isSearchOpen = false"
           @keydown.escape.window="isSearchOpen = false"
           x-data="{
-          search: '',
-          items: {
-              'Finding Hidden Gems Beach': [
-                  'Offering unparalleled natural beauty. With pristine white sands, majestic cliffs, and crystal-clear waters, snorkeling, or simply unwinding in peace.',
-                  '../src/img/cliff.jpg'
-              ],
-              'See Todays Ceremony': [
-                'Bali is a land of ceremonies and festivals. The Balinese calendar is full of festivals and celebrations, and you can find one happening almost every day.',
-                  '../src/img/local.jpg'
-              ],
-              'How to Speak to the local': [
-                'The Balinese people are known for their warm hospitality and friendliness. Learn a few phrases in Bahasa Indonesia to make your trip more enjoyable.',
-                  '../src/img/people.jpg'
-              ],
-          },
-          get filteredItems() {
-              return Object.keys(this.items).filter(key =>
-                  key.toLowerCase().includes(this.search.toLowerCase())
-              );
-          }
-      }"
+           search: '',
+           items: {
+               'Finding Hidden Gems Beach': [
+                   'Offering unparalleled natural beauty. With pristine white sands, majestic cliffs, and crystal-clear waters, snorkeling, or simply unwinding in peace.',
+                   '../src/img/cliff.jpg'
+               ],
+               'See Todays Ceremony': [
+                 'Bali is a land of ceremonies and festivals. The Balinese calendar is full of festivals and celebrations, and you can find one happening almost every day.',
+                   '../src/img/local.jpg'
+               ],
+               'How to Speak to the local': [
+                 'The Balinese people are known for their warm hospitality and friendliness. Learn a few phrases in Bahasa Indonesia to make your trip more enjoyable.',
+                   '../src/img/people.jpg'
+               ],
+           },
+           get filteredItems() {
+               return Object.keys(this.items).filter(key =>
+                   key.toLowerCase().includes(this.search.toLowerCase())
+               );
+           }
+       }"
           class="px-2 md:px-20 pt-8 flex flex-col items-start bg-white"
         >
           <form
@@ -382,25 +410,27 @@
           <div class="w-full border-strong border-t-4 rounded-full my-1"></div>
           <ul class="mt-5">
             <template x-for="item in filteredItems" :key="item">
-              <li
-                class="flex transition-all duration-300 hover:bg-secondary/20 p-3 rounded-lg cursor-pointer"
-              >
-                <img
-                  :src="items[item][1]"
-                  alt=""
-                  class="w-2/5 md:w-1/3 lg:w-1/5 rounded-lg shadow-lg lg:h-32 object-center"
-                />
-                <div class="ml-3">
-                  <h3
-                    class="font-subtitle text-xl md:text-2xl font-semibold"
-                    x-text="item"
-                  ></h3>
-                  <p
-                    class="hidden md:block text-body font-body text-sm"
-                    x-text="items[item][0]"
-                  ></p>
-                </div>
-              </li>
+              <a href="blog.html">
+                <li
+                  class="flex transition-all duration-300 hover:bg-secondary/20 p-3 rounded-lg cursor-pointer"
+                >
+                  <img
+                    :src="items[item][1]"
+                    alt=""
+                    class="w-2/5 md:w-1/3 lg:w-1/5 rounded-lg shadow-lg lg:h-32 object-center"
+                  />
+                  <div class="ml-3">
+                    <h3
+                      class="font-subtitle text-xl md:text-2xl font-semibold"
+                      x-text="item"
+                    ></h3>
+                    <p
+                      class="hidden md:block text-body font-body text-sm"
+                      x-text="items[item][0]"
+                    ></p>
+                  </div>
+                </li>
+              </a>
             </template>
           </ul>
         </div>
@@ -410,10 +440,10 @@
           x-show="isNavMobOpen"
           @click.away="isNavMobOpen = false"
           x-data="{
-          isDestinationOpen: true, 
-          isItenaryOpen: false, 
-          isTipsOpen: false,
-        }"
+           isDestinationOpen: true, 
+           isItenaryOpen: false, 
+           isTipsOpen: false,
+         }"
           class="flex lg:hidden flex-col mt-8 gap-y-3"
         >
           <button
@@ -531,13 +561,18 @@
           class="absolute bottom-10 text-white text-base font-body left-4 md:left-14"
           ><i class="bi bi-geo-alt"></i> Tegalalang Rice Terrace</a
         >
+        <div class="scroll-downs bottom-1 right-3 hidden lg:block">
+          <div class="mousey">
+            <div class="scroller"></div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Jumbotron End -->
 
     <!-- Content start -->
     <div
-      class="flex flex-col md:flex-row justify-center items-center py-14 md:py-24 -mt-5 rounded-2xl lg:rounded-none px-4 md:px-12 bg-white"
+      class="flex flex-col md:flex-row justify-center items-center py-14 md:py-24 -mt-5 lg:mt-0 rounded-2xl lg:rounded-none px-4 md:px-12 bg-white"
     >
       <div class="line-pattern -mt-10 mb-10 block md:hidden"></div>
       <div class="mb-5 w-full md:w-3/5">
