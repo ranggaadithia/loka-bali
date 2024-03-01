@@ -59,7 +59,7 @@
     />
 
     <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- icon -->
     <link
       rel="stylesheet"
@@ -551,17 +551,29 @@
     <div
       class="bg-[url('/src/img/jumbotron-lg.webp')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-gradient-to-b after:from-black/30 -z-10"
     >
-      <div class="container mx-auto z-50 text-center " >
-        <p class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10" data-aos="fade-up" data-aos-duration="1500">
+      <div class="container mx-auto z-50 text-center">
+        <p
+          class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           explore
         </p>
-        <h1 class="text-5xl md:text-6xl text-white leading-relaxed font-title" data-aos="fade-up" data-aos-duration="2000">
+        <h1
+          class="text-5xl md:text-6xl text-white leading-relaxed font-title"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Hidden Gems Bali
         </h1>
-        <div class="line-pattern mx-auto mt-1 md:mt-3" data-aos="fade-up" data-aos-duration="2900"></div>
+        <div
+          class="line-pattern mx-auto mt-1 md:mt-3"
+          data-aos="fade-up"
+          data-aos-duration="2900"
+        ></div>
         <a
           href=""
-          class="absolute bottom-10 text-white text-base font-body left-4 md:left-14" 
+          class="absolute bottom-10 text-white text-base font-body left-4 md:left-14"
           ><i class="bi bi-geo-alt"></i> Tegalalang Rice Terrace</a
         >
         <div class="scroll-downs bottom-1 right-3 hidden lg:block">
@@ -578,10 +590,13 @@
       class="flex flex-col md:flex-row justify-center items-center py-14 md:py-24 -mt-5 lg:mt-0 rounded-2xl lg:rounded-none px-4 md:px-12 bg-white"
     >
       <div class="line-pattern -mt-10 mb-10 block md:hidden"></div>
-      <div class="mb-5 w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+      <div
+        class="mb-5 w-full md:w-1/2"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <div
           class="font-subtitle mb-2 text-xl font-bold md:text-2xl lg:text-3xl lg:mb-4 leading-6"
-
         >
           Discover Bali Beyond the Crowds: Unveil the Unseen, Embrace the
           Authentic.
@@ -596,6 +611,8 @@
       </div>
       <div
         class="flex justify-center items-center w-full h-56 md:w-1/2 relative md:ms-6 md:h-48 lg:h-64 xl:h-80 xl:ms-10 mt-5 md:mt-0"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
       >
         <img
           src="src/img/campuhan-ridge-walk.webp"
@@ -622,7 +639,9 @@
         <div class="flex justify-between w-full">
           <div class="flex justify-start">
             <div
-              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="800"
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              data-aos="fade-right"
+              data-aos-duration="800"
             >
               Loka Itineraries
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -651,26 +670,30 @@
           <template x-for="eat in eats" :key="eat.id">
             <a
               href="itinerary.html"
-              class="swiper-slide cursor-pointer rounded-lg drop-shadow-lg group bg-white relative group overflow-hidden mb-20"
+              class="swiper-slide cursor-pointer rounded-lg drop-shadow-lg group relative group overflow-hidden mb-20"
             >
-            <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
               <div
-                class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10 group-hover:scale-105 transition-all duration-300 ease-in-out rounded-lg"
-              ></div>
-              <div
-                class="absolute text-white bottom-4 group-hover:bottom-12 left-4 font-subtitle font-semibold text-xl md:text-lg lg:text-2xl transition-all duration-300 ease-in-out z-10"
-                x-text="eat.title"
-              ></div>
-              <div
-                class="absolute text-white bottom-0 opacity-0 group-hover:bottom-4 group-hover:opacity-100 left-4 font-body text-sm md:text-lg lg:text-lg font-light transition-all duration-300 ease-in-out z-10"
-                x-html="eat.price"
-              ></div>
-              <img
-                :src="eat.img"
-                loading="lazy"
-                alt=""
-                class="rounded-lg w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
-              />
+                data-aos="fade-up"
+                :data-aos-duration="eat.dur"
+                data-aos-delay="500"
+              >
+                <div
+                  class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10 group-hover:scale-105 transition-all duration-300 ease-in-out rounded-lg"
+                ></div>
+                <div
+                  class="absolute text-white bottom-4 group-hover:bottom-12 left-4 font-subtitle font-semibold text-xl md:text-lg lg:text-2xl transition-all duration-300 ease-in-out z-10"
+                  x-text="eat.title"
+                ></div>
+                <div
+                  class="absolute text-white bottom-0 opacity-0 group-hover:bottom-4 group-hover:opacity-100 left-4 font-body text-sm md:text-lg lg:text-lg font-light transition-all duration-300 ease-in-out z-10"
+                  x-html="eat.price"
+                ></div>
+                <img
+                  :src="eat.img"
+                  alt=""
+                  class="rounded-lg w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
+                />
+              </div>
             </a>
           </template>
         </div>
@@ -683,7 +706,6 @@
           class="swiper-pagination flex justify-start items-center pt-10 md:hidden"
         ></div>
       </div>
-
       <img
         src="src/img/Frame.png"
         alt=""
@@ -703,7 +725,9 @@
         <div class="flex justify-between relative w-full">
           <div class="flex justify-start">
             <div
-              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="800"
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              data-aos="fade-right"
+              data-aos-duration="800"
             >
               Today Ceremonies
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -722,47 +746,49 @@
       <div
         class="swiper mySwiperGrab mt-10"
         x-data="{ eats: [
-              {id: 1, title: 'Ngaben', img: 'src/img/ngaben.png', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 12PM - 3PM'},
-              {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Pengerupukan Pengerupukan, also known as Nyepi eve, is a significant cultural event in Bali, Indonesia, marking the eve of Nyepi, the Balinese Hindu New Year. It involves elaborate rituals and ceremonies aimed at purification' , clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6PM - 12AM'},
-              {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Melasti is a sacred Balinese Hindu ritual conducted annually in the days leading up to Nyepi, the Balinese Hindu New Year. This ceremony is a vital part of the purification process before Nyepi, aimed at cleansing the soul and the environment from impurities. During Melasti, worshippers gather at nearby water sources such as rivers or the sea, carrying sacred temple objects and effigies of gods and goddesses.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6AM - 1PM'},
-              {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Odalan is a traditional Balinese Hindu ceremony celebrated at temples throughout Bali to honor the deities and commemorate the temple\'s anniversary. This ritual is an essential aspect of Balinese Hindu culture, highlighting the deep reverence and devotion to the gods. The timing of Odalan varies from temple to temple, as it follows the Balinese calendar, which is based on a 210-day cycle. During Odalan, elaborate preparations are made, including cleaning and decorating the temple, preparing offerings, and organizing cultural performances such as traditional dances and music. The main ceremony involves prayers, chants, and rituals conducted by Hindu priests, accompanied by the offering of various items such as fruits, flowers, and incense to the deities. Odalan is a time for the community to come together in worship, celebration, and cultural expression, reinforcing bonds within the community and reaffirming their spiritual connection to the divine.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 10AM - 3PM'},
-            ] }">
+              {id: 1, title: 'Ngaben', img: 'src/img/ngaben.png', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 12PM - 3PM', dur: 1000},
+              {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Pengerupukan Pengerupukan, also known as Nyepi eve, is a significant cultural event in Bali, Indonesia, marking the eve of Nyepi, the Balinese Hindu New Year. It involves elaborate rituals and ceremonies aimed at purification' , clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6PM - 12AM', dur: 1400},
+              {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Melasti is a sacred Balinese Hindu ritual conducted annually in the days leading up to Nyepi, the Balinese Hindu New Year. This ceremony is a vital part of the purification process before Nyepi, aimed at cleansing the soul and the environment from impurities. During Melasti, worshippers gather at nearby water sources such as rivers or the sea, carrying sacred temple objects and effigies of gods and goddesses.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6AM - 1PM', dur: 1800},
+              {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Odalan is a traditional Balinese Hindu ceremony celebrated at temples throughout Bali to honor the deities and commemorate the temple\'s anniversary. This ritual is an essential aspect of Balinese Hindu culture, highlighting the deep reverence and devotion to the gods. The timing of Odalan varies from temple to temple, as it follows the Balinese calendar, which is based on a 210-day cycle. During Odalan, elaborate preparations are made, including cleaning and decorating the temple, preparing offerings, and organizing cultural performances such as traditional dances and music. The main ceremony involves prayers, chants, and rituals conducted by Hindu priests, accompanied by the offering of various items such as fruits, flowers, and incense to the deities. Odalan is a time for the community to come together in worship, celebration, and cultural expression, reinforcing bonds within the community and reaffirming their spiritual connection to the divine.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 10AM - 3PM', dur: 2200},
+            ] }"
+      >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
-            <div
-              class="swiper-slide cursor-pointer mb-10 rounded-lg  group"
-            >
-            <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
-              <img
-                :src="eat.img"
-                alt=""
-                class="rounded-t-lg w-full h-48 object-cover"
-              />
-              <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7">
-                <div
-                  class="text-sm text-body font-light"
-                  x-html="eat.clock"
-                ></div>
-                <div class="flex justify-between items-center mb-2">
+            <div class="swiper-slide cursor-pointer mb-10 rounded-lg group">
+              <div
+                data-aos="fade-up"
+                :data-aos-duration="eat.dur"
+                data-aos-delay="500"
+              >
+                <img
+                  :src="eat.img"
+                  alt=""
+                  class="rounded-t-lg w-full h-48 object-cover"
+                />
+                <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7">
+                  <div
+                    class="text-sm text-body font-light"
+                    x-html="eat.clock"
+                  ></div>
+                  <div class="flex justify-between items-center mb-2">
+                    <div
+                      class="font-subtitle font-semibold text-lg xl:text-xl"
+                      x-text="eat.title"
+                    ></div>
+                    <a
+                      href=""
+                      class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-100 ease-in-out"
+                    >
+                      <i class="fa-regular fa-map xl:text-xl"></i>
+                    </a>
+                  </div>
 
                   <div
-                    class="font-subtitle font-semibold text-lg xl:text-xl"
-                    x-text="eat.title"
+                    class="text-xs text-slate-500 xl:text-sm -mt-2 md:-mt-2 truncate h-20 text-pretty"
+                    x-text="eat.price"
                   ></div>
-                  <a
-                    href=""
-                    class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-100 ease-in-out"
-                  >
-                    <i class="fa-regular fa-map xl:text-xl"></i>
-                  </a>
                 </div>
-
-                <div
-                  class="text-xs text-slate-500 xl:text-sm -mt-2 md:-mt-2 truncate h-20 text-pretty"
-                  x-text="eat.price"
-                ></div>
               </div>
-            </div>
             </div>
           </template>
         </div>
@@ -784,7 +810,9 @@
     >
       <div class="flex justify-start">
         <div
-          class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-up" data-aos-duration="800"
+          class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+          data-aos="fade-right"
+          data-aos-duration="800"
         >
           Read Our Blog
           <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -796,6 +824,8 @@
         <a
           href="blog.html"
           class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative group"
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -825,7 +855,9 @@
         </a>
         <a
           href="blog.html"
-          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group" data-aos="fade-up" data-aos-duration="1500"
+          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group"
+          data-aos="fade-up"
+          data-aos-duration="1500"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -855,6 +887,8 @@
         <a
           href="blog.html"
           class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
+          data-aos="fade-up"
+          data-aos-duration="2000"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -883,7 +917,9 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group" data-aos="fade-up" data-aos-duration="2500"
+          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
+          data-aos="fade-up"
+          data-aos-duration="2500"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -912,7 +948,9 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group" data-aos="fade-up" data-aos-duration="3000"
+          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
+          data-aos="fade-up"
+          data-aos-duration="3000"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -941,7 +979,9 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group" data-aos="fade-up" data-aos-duration="2800"
+          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group"
+          data-aos="fade-up"
+          data-aos-duration="2400"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -996,7 +1036,10 @@
         >
           <div class="flex justify-start">
             <div
-              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500"
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="500"
             >
               Explore More
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -1014,10 +1057,10 @@
         <div
           class="swiper adventureSwiper mt-10"
           x-data="{ eats: [
-                  {id: 1, title: 'Denpasar: Gateway to Bali', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/harfian-ananta-daffa-NooiiPQWlWA-unsplash_1.webp?alt=media&token=e4dd683d-ace4-42cf-83e4-1391ba813449', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 2, title: 'Ubud: Art Village', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 3, title: 'Amed: Bali\'s Diving Paradise', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/spenser-sembrat-w4SMIMJNmP8-unsplash.webp?alt=media&token=3517b573-f546-4af0-a74f-bd142a84d25d', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 4, title: 'Kintamani: Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/aditya-putra-PKdTw9neDHc-unsplash-_1_.webp?alt=media&token=05b17a11-f4ae-4863-85a6-9a01e68c801b', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 1, title: 'Denpasar: Gateway to Bali', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/harfian-ananta-daffa-NooiiPQWlWA-unsplash_1.webp?alt=media&token=e4dd683d-ace4-42cf-83e4-1391ba813449', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1000},
+                  {id: 2, title: 'Ubud: Art Village', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1400},
+                  {id: 3, title: 'Amed: Bali\'s Diving Paradise', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/spenser-sembrat-w4SMIMJNmP8-unsplash.webp?alt=media&token=3517b573-f546-4af0-a74f-bd142a84d25d', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1800},
+                  {id: 4, title: 'Kintamani: Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/aditya-putra-PKdTw9neDHc-unsplash-_1_.webp?alt=media&token=05b17a11-f4ae-4863-85a6-9a01e68c801b', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 2200},
 
                 ] }"
         >
@@ -1025,30 +1068,34 @@
             <template x-for="eat in eats" :key="eat.id">
               <a
                 href="/ubud.html"
-                class="swiper-slide cursor-pointer mb-5 rounded-lg drop-shadow-xl group bg-white overflow-hidden relative"
-
+                class="swiper-slide cursor-pointer mb-5 rounded-lg group bg-white overflow-hidden relative"
               >
-              <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
                 <div
-                  class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10"
-                ></div>
-                <div
-                  class="absolute text-white bottom-4 font-subtitle md:text-lg lg:text-2xl font-semibold z-10 w-full flex justify-between px-3 items-center"
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  :data-aos-delay="eat.dur"
+                  class="drop-shadow-xl"
                 >
-                  <span x-text="eat.title"></span>
-                  <i
-                    class="fa-solid fa-arrow-right mr-3 group-hover:mr-0 transition-all duration-200 ease-in-out"
-                  ></i>
+                  <div
+                    class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10"
+                  ></div>
+                  <div
+                    class="absolute text-white bottom-4 font-subtitle md:text-lg lg:text-2xl font-semibold z-10 w-full flex justify-between px-3 items-center"
+                  >
+                    <span x-text="eat.title"></span>
+                    <i
+                      class="fa-solid fa-arrow-right mr-3 group-hover:mr-0 transition-all duration-200 ease-in-out"
+                    ></i>
+                  </div>
+
+                  <img
+                    :src="eat.img"
+                    alt=""
+                    class="rounded-lg w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out"
+                    style="transform-origin: center"
+                  />
                 </div>
-
-                <img
-                  :src="eat.img"
-                  alt=""
-                  class="rounded-lg w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out"
-                  style="transform-origin: center"
-                />
               </a>
-
             </template>
           </div>
         </div>
