@@ -66,7 +66,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
   </head>
-  <body class="custom-scrollbar">
+  <body class="custom-scrollbar font-body">
     <!-- navbar start-->
     <div
       class="navbar fixed w-full top-0 z-[999] transition-all duration-1000 ease-in-out"
@@ -580,37 +580,37 @@
       <div class="line-pattern -mt-10 mb-10 block md:hidden"></div>
       <div class="mb-5 w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
         <div
-          class="font-subtitle mb-2 text-xl font-semibold md:text-2xl lg:text-3xl lg:mb-4" 
+          class="font-subtitle mb-2 text-xl font-bold md:text-2xl lg:text-3xl lg:mb-4 leading-6"
+
         >
-          Explore: The iconic art village Ubud
+          Discover Bali Beyond the Crowds: Unveil the Unseen, Embrace the
+          Authentic.
         </div>
-        <div
-          class="font-body text-xs text-justify font-extralight lg:text-base"
-        >
-          Ubud is an iconic art village located in Bali, Indonesia. Renowned for
-          its breathtaking natural beauty, Ubud also serves as a hub for arts,
-          culture, and spirituality in Bali. The village is filled with art
-          galleries, handicraft studios, and traditional performance venues such
-          as Balinese dance and gamelan music.
+        <div class="font-body text-xs text-body font-light lg:text-base">
+          Loka Bali is your gateway to undiscovered wonders in the heart of
+          Bali. We're on a mission to redefine Bali tourism, unveiling hidden
+          gems and local wonders often overshadowed by overtourism. Discover the
+          authentic Bali experience through our curated selection of
+          off-the-beaten-path destinations and community-led activities.
         </div>
       </div>
       <div
-        class="flex justify-center items-center w-full h-56 md:w-1/2 relative md:ms-6 md:h-48 lg:h-64 xl:h-80 xl:ms-10" data-aos="zoom-in" data-aos-duration="2000"
+        class="flex justify-center items-center w-full h-56 md:w-1/2 relative md:ms-6 md:h-48 lg:h-64 xl:h-80 xl:ms-10 mt-5 md:mt-0"
       >
         <img
           src="src/img/campuhan-ridge-walk.webp"
           alt=""
-          class="absolute w-60 z-40 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:scale-110 transition ease-in duration-300 cursor-pointer"
+          class="absolute w-60 z-40 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:scale-110 transition ease-in duration-300 cursor-pointer drop-shadow-2xl"
         />
         <img
-          src="src/img/bangkiang-djaran.jpeg"
+          src="src/img/homedes/over1.webp"
           alt=""
-          class="absolute w-60 bottom-0 left-0 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:z-50 hover:scale-110 transition ease-in duration-300 cursor-pointer"
+          class="absolute w-60 bottom-0 left-0 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:z-50 hover:scale-110 transition ease-in duration-300 cursor-pointer hover:drop-shadow-2xl"
         />
         <img
-          src="src/img/bangkiang-djaran.jpeg"
+          src="src/img/homedes/over2.webp"
           alt=""
-          class="absolute w-60 top-0 right-0 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:z-50 hover:scale-110 transition ease-in duration-300 cursor-pointer"
+          class="absolute w-60 top-0 right-0 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:z-50 hover:scale-110 transition ease-in duration-300 cursor-pointer hover:drop-shadow-2xl"
         />
       </div>
     </div>
@@ -641,16 +641,17 @@
       <div
         class="swiper mySwiperGrab mt-10"
         x-data="{ eats: [
-              {id: 1, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1000},
-              {id: 2, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1400},
-              {id: 3, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1800},
-              {id: 4, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 2200},
+              {id: 1, title: 'Hidden Beach', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/felfin-felfin-5MV818tzxeo-unsplash.webp?alt=media&token=f2f012ea-482f-41f4-8165-621a3521216b', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 5 places'},
+              {id: 2, title: 'Spiritual Journey', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/priyank-pathak-trw_VfOqO2I-unsplash-_1_.webp?alt=media&token=939a9fd2-d790-448e-8730-e07e04808e6f', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 5 places'},
+              {id: 3, title: 'Bali Eco Adventure', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
+              {id: 4, title: 'Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/hugo-villegas-gJiG3zJZmr8-unsplash.webp?alt=media&token=ac329040-9e9f-490d-800f-6e57133ae58a', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
             ] }"
       >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
-            <div
-              class="swiper-slide cursor-pointer rounded-lg drop-shadow-lg group relative group overflow-hidden mb-20" 
+            <a
+              href="itinerary.html"
+              class="swiper-slide cursor-pointer rounded-lg drop-shadow-lg group bg-white relative group overflow-hidden mb-20"
             >
             <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
               <div
@@ -666,12 +667,17 @@
               ></div>
               <img
                 :src="eat.img"
+                loading="lazy"
                 alt=""
                 class="rounded-lg w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
               />
-            </div>
-            </div>
+            </a>
           </template>
+        </div>
+        <div class="w-full flex justify-end items-center">
+          <a href="" class="text-strong text-sm font-semibold"
+            >More Itineraries <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
         <div
           class="swiper-pagination flex justify-start items-center pt-10 md:hidden"
@@ -699,7 +705,7 @@
             <div
               class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="800"
             >
-              Today Ceremony
+              Today Ceremonies
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
             </div>
           </div>
@@ -716,11 +722,10 @@
       <div
         class="swiper mySwiperGrab mt-10"
         x-data="{ eats: [
-              {id: 1, title: 'Ngaben', img: 'src/img/ngaben.png', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 1000},
-              {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 1400 },
-              {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 1800},
-              {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 2200},
-            ] }"
+              {id: 1, title: 'Ngaben', img: 'src/img/ngaben.png', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 12PM - 3PM'},
+              {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Pengerupukan Pengerupukan, also known as Nyepi eve, is a significant cultural event in Bali, Indonesia, marking the eve of Nyepi, the Balinese Hindu New Year. It involves elaborate rituals and ceremonies aimed at purification' , clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6PM - 12AM'},
+              {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Melasti is a sacred Balinese Hindu ritual conducted annually in the days leading up to Nyepi, the Balinese Hindu New Year. This ceremony is a vital part of the purification process before Nyepi, aimed at cleansing the soul and the environment from impurities. During Melasti, worshippers gather at nearby water sources such as rivers or the sea, carrying sacred temple objects and effigies of gods and goddesses.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6AM - 1PM'},
+              {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Odalan is a traditional Balinese Hindu ceremony celebrated at temples throughout Bali to honor the deities and commemorate the temple\'s anniversary. This ritual is an essential aspect of Balinese Hindu culture, highlighting the deep reverence and devotion to the gods. The timing of Odalan varies from temple to temple, as it follows the Balinese calendar, which is based on a 210-day cycle. During Odalan, elaborate preparations are made, including cleaning and decorating the temple, preparing offerings, and organizing cultural performances such as traditional dances and music. The main ceremony involves prayers, chants, and rituals conducted by Hindu priests, accompanied by the offering of various items such as fruits, flowers, and incense to the deities. Odalan is a time for the community to come together in worship, celebration, and cultural expression, reinforcing bonds within the community and reaffirming their spiritual connection to the divine.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 10AM - 3PM'},
       >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
@@ -733,10 +738,15 @@
                 alt=""
                 class="rounded-t-lg w-full h-48 object-cover"
               />
-              <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7 shadow-sm md:shadow-md rounded-lg">
-                <div class="flex justify-between mb-2 items-center">
+              <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7">
+                <div
+                  class="text-sm text-body font-light"
+                  x-html="eat.clock"
+                ></div>
+                <div class="flex justify-between items-center mb-2">
+
                   <div
-                    class="font-subtitle text-lg xl:text-xl"
+                    class="font-subtitle font-semibold text-lg xl:text-xl"
                     x-text="eat.title"
                   ></div>
                   <a
@@ -746,6 +756,7 @@
                     <i class="fa-regular fa-map xl:text-xl"></i>
                   </a>
                 </div>
+
                 <div
                   class="text-xs text-slate-500 xl:text-sm -mt-2 md:-mt-2 truncate h-20 text-pretty"
                   x-text="eat.price"
@@ -754,6 +765,11 @@
             </div>
             </div>
           </template>
+        </div>
+        <div class="w-full flex justify-end items-center">
+          <a href="" class="text-strong text-sm font-semibold"
+            >Ceremonies Calendar <i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
         <div
           class="swiper-pagination flex justify-start items-center pt-10 md:hidden"
@@ -775,11 +791,11 @@
         </div>
       </div>
       <div
-        class="grid grid-cols-12 grid-rows-12 gap-5 md:h-screen lg:h-full my-7 z-30"
+        class="grid grid-cols-12 grid-rows-12 gap-5 h-screen lg:h-full my-7 z-30"
       >
         <a
-          href="ubud.html"
-          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative group" data-aos="fade-up" data-aos-duration="1000"
+          href="blog.html"
+          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative group"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -787,16 +803,17 @@
             <div
               class="font-subtitle md:text-lg lg:text-xl font-semibold flex justify-between items-center"
             >
-              <span>Semar Kuning Artist</span>
+              <span class="leading-5">Learn Painting From the Maestro</span>
               <button
                 class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-150 ease-in-out"
               >
                 <i class="fa-regular fa-heart xl:text-xl"></i>
               </button>
             </div>
-            <p class="text-xs text-body font-body mb-1">
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.
+            <p class="text-xs text-body font-body mb-1 mt-2">
+              Learn traditional techniques, experiment with different styles,
+              and create your masterpiece amidst the inspiring landscapes of
+              Bali.
             </p>
           </div>
           <img
@@ -816,28 +833,28 @@
             <div
               class="font-subtitle md:text-lg lg:text-xl font-semibold flex justify-between items-center"
             >
-              <span>Semar Kuning Artist</span>
+              <span>Exploring Bali's Secret Waterfalls: A Guide</span>
               <button
                 class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-150 ease-in-out"
               >
                 <i class="fa-regular fa-heart xl:text-xl"></i>
               </button>
             </div>
-            <p class="text-xs text-body font-body mb-1">
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.industry's standard dummy text ever
+            <p class="text-xs text-body font-body mb-1 mt-2">
+              Explore hidden gems tucked away in the island's lush jungles and
+              emerald landscapes.
             </p>
           </div>
           <img
-            src="/src/img/bangkiang-djaran.jpeg"
+            src="https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/ezgif-7-17db0f21bc.webp?alt=media&token=b3287988-b550-414d-a664-ec575bbf6ad6"
             alt=""
             loading="lazy"
             class="object-cover h-full w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
           />
         </a>
         <a
-          href=""
-          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group" data-aos="fade-up" data-aos-duration="2000"
+          href="blog.html"
+          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -845,7 +862,7 @@
             <div
               class="font-subtitle md:text-lg lg:text-xl font-semibold flex justify-between items-center"
             >
-              <span>Semar Kuning Artist</span>
+              <span>Must-Try Local Dishes</span>
               <button
                 class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-150 ease-in-out"
               >
@@ -853,15 +870,15 @@
               </button>
             </div>
             <p class="text-xs text-body font-body mb-1">
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book
+              Get ready to tantalize your taste buds with Bali's flavorful local
+              cuisine.
             </p>
           </div>
           <img
-            src="src/img/gunung-kawi.jpg"
+            src="https://www.agoda.com/wp-content/uploads/2018/06/Experience-Bali_food-and-drink_Batu-Bolong-Street_Canggu_babi-guling.jpg"
             alt=""
             loading="lazy"
-            class="object-fill h-full w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
+            class="object-cover h-full w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
           />
         </a>
         <a
@@ -874,20 +891,20 @@
             <div
               class="font-subtitle md:text-lg lg:text-xl font-semibold flex justify-between items-center"
             >
-              <span>Semar Kuning Artist</span>
+              <span>Unique Villages to Explore in Bali</span>
               <button
                 class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-150 ease-in-out"
               >
                 <i class="fa-regular fa-heart xl:text-xl"></i>
               </button>
             </div>
-            <p class="text-xs text-body font-body mb-1">
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.
+            <p class="text-xs text-body font-body mb-1 mt-2">
+              Escape the tourist crowds and discover the authentic charm of
+              Bali's unique villages.
             </p>
           </div>
           <img
-            src="src/img/tangkup-waterfall.jpeg"
+            src="src/img/image4.jpg"
             alt=""
             loading="lazy"
             class="object-cover h-full w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
@@ -903,20 +920,20 @@
             <div
               class="font-subtitle md:text-lg lg:text-xl font-semibold flex justify-between items-center"
             >
-              <span>Semar Kuning Artist</span>
+              <span>Welcome to Bali: A Guide for First-Time Visitors</span>
               <button
                 class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-150 ease-in-out"
               >
                 <i class="fa-regular fa-heart xl:text-xl"></i>
               </button>
             </div>
-            <p class="text-xs text-body font-body mb-1">
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.
+            <p class="text-xs text-body font-body mb-1 mt-2">
+              Let our recommendation be your companion, unforgettable journey
+              through this tropical paradise.
             </p>
           </div>
           <img
-            src="src/img/image2.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/harfian-ananta-daffa-NooiiPQWlWA-unsplash_1.webp?alt=media&token=e4dd683d-ace4-42cf-83e4-1391ba813449"
             alt=""
             loading="lazy"
             class="object-cover h-full w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
@@ -932,7 +949,7 @@
             <div
               class="font-subtitle md:text-lg lg:text-xl font-semibold flex justify-between items-center"
             >
-              <span>Semar Kuning Artist</span>
+              <span>How to Speak to the Local</span>
               <button
                 class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-150 ease-in-out"
               >
@@ -940,24 +957,23 @@
               </button>
             </div>
             <p class="text-xs text-body font-body mb-1">
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.
+              The Balinese people are known for their warm hospitality and
+              friendliness. Learn a few phrases in Bahasa Indonesia to make your
+              trip more enjoyable.
             </p>
           </div>
           <img
-            src="src/img/campuhan-ridge-walk.webp"
+            src="src/img/people.jpg"
             alt=""
             loading="lazy"
             class="object-cover h-full w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
           />
         </a>
       </div>
-      <div class="flex justify-center">
-        <a
-          href=""
-          class="font-body text-sm bg-emerald-50 outline outline-strong rounded-md px-2 py-1 md:text-lg lg:text-xl lg:px-4 lg:py-2" 
-          >explore more...</a
-        >
+      <div class="w-full flex justify-end items-center">
+        <a href="" class="text-strong text-sm font-semibold"
+          >More Blog <i class="fa-solid fa-arrow-right"></i
+        ></a>
       </div>
       <img
         src="src/img/Frame.png"
@@ -998,16 +1014,19 @@
         <div
           class="swiper adventureSwiper mt-10"
           x-data="{ eats: [
-                  {id: 1, title: 'Ubud: Art Village ', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1500},
-                  {id: 2, title: 'K-Club Jimbaran', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 2000},
-                  {id: 3, title: 'K-Club Delights', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 2500},
-                  {id: 4, title: 'K-Club each', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 3000},
+                  {id: 1, title: 'Denpasar: Gateway to Bali', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/harfian-ananta-daffa-NooiiPQWlWA-unsplash_1.webp?alt=media&token=e4dd683d-ace4-42cf-83e4-1391ba813449', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 2, title: 'Ubud: Art Village', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 3, title: 'Amed: Bali\'s Diving Paradise', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/spenser-sembrat-w4SMIMJNmP8-unsplash.webp?alt=media&token=3517b573-f546-4af0-a74f-bd142a84d25d', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 4, title: 'Kintamani: Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/aditya-putra-PKdTw9neDHc-unsplash-_1_.webp?alt=media&token=05b17a11-f4ae-4863-85a6-9a01e68c801b', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+
                 ] }"
         >
           <div class="swiper-wrapper pl-7 lg:pl-20">
             <template x-for="eat in eats" :key="eat.id">
-              <div
-                class="swiper-slide cursor-pointer mb-5 rounded-lg drop-shadow-xl group overflow-hidden relative" 
+              <a
+                href="/ubud.html"
+                class="swiper-slide cursor-pointer mb-5 rounded-lg drop-shadow-xl group bg-white overflow-hidden relative"
+
               >
               <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
                 <div
@@ -1028,8 +1047,8 @@
                   class="rounded-lg w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out"
                   style="transform-origin: center"
                 />
-              </div>
-              </div>
+              </a>
+
             </template>
           </div>
         </div>
@@ -1040,7 +1059,9 @@
     <!-- Local Explore more -->
 
     <!-- footer -->
-    <footer class="text-center lg:text-left bg-emerald-950 text-gray-100">
+    <footer
+      class="text-center lg:text-left bg-emerald-950 text-gray-100 font-body text-sm"
+    >
       <div class="mx-10 lg:px-15 py-10 text-center md:text-left">
         <div
           class="flex flex-col md:flex-col lg:flex-row mx-auto md:justify-between lg:items-center"
@@ -1050,9 +1071,11 @@
               Loka Bali
             </h6>
             <div class="line-pattern mx-auto lg:ml-7 mb-10"></div>
-            <p class="-mt-5 md:text-center lg:text-left">
-              My Tour Bali is a reliable driver that can make your holiday in
-              Bali memorable.
+            <p
+              class="-mt-5 text-sm md:text-base md:text-center lg:text-left font-body"
+            >
+              Connect you to the best authentic experiences in Bali. Finding
+              Hidden Gems, Local Culture, and Adventure.
             </p>
           </div>
 
@@ -1060,17 +1083,20 @@
             class="flex flex-col md:flex-row basis-1/2 lg:justify-between md:justify-around md:mt-10"
           >
             <div class="flex flex-col">
-              <div class="mt-5">
+              <div class="mt-10 md:mt-5">
                 <h6
                   class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
                 >
-                  Help
+                  Contribute With Us
                 </h6>
                 <p class="mb-4">
-                  <a href="#!" class="text-emerald-600">How to Booking</a>
+                  <a href="#!" class="text-emerald-50">Become Partner</a>
                 </p>
                 <p class="mb-4">
-                  <a href="#!" class="text-emerald-600">Term and Condition</a>
+                  <a href="#!" class="text-emerald-50">Business Partner</a>
+                </p>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Event</a>
                 </p>
               </div>
               <div class="mt-5">
@@ -1081,20 +1107,19 @@
                 </h6>
 
                 <p class="mb-4">
-                  <a href="/#services" class="text-emerald-600">Services</a>
-                </p>
-                <p class="mb-4">
-                  <a href="/#destinations" class="text-emerald-600"
-                    >Destinations</a
+                  <a href="/#services" class="text-emerald-50"
+                    >Top Destination</a
                   >
                 </p>
                 <p class="mb-4">
-                  <a href="/#tour-packages" class="text-emerald-600"
-                    >Tour Packages</a
+                  <a href="/#destinations" class="text-emerald-50"
+                    >Top Activities</a
                   >
                 </p>
                 <p class="mb-4">
-                  <a href="/#gallery" class="text-emerald-600">Gallery</a>
+                  <a href="/#tour-packages" class="text-emerald-50"
+                    >Travel Tips</a
+                  >
                 </p>
               </div>
             </div>
@@ -1108,49 +1133,55 @@
                 <p class="mb-4">
                   <a
                     href="https://instagram.com/balidriverputu?igshid=ZDdkNTZiNTM="
-                    class="text-emerald-600"
+                    class="text-emerald-50"
                     target="_blank"
-                    ><i class="icofont-instagram"></i> balidriverputu</a
+                    ><i class="bi bi-instagram mr-1"></i> loka.bali</a
                   >
                 </p>
                 <p class="mb-4">
                   <a
                     href="https://www.facebook.com/putu.balidriver.3?mibextid=ZbWKwL"
-                    class="text-emerald-600"
+                    class="text-emerald-50"
                     target="_blank"
                   >
-                    <i class="icofont-facebook"></i> Putu Bali Driver</a
+                    <i class="bi bi-facebook mr-1"></i> Loka Bali</a
                   >
                 </p>
                 <p class="mb-4 block">
                   <a
                     href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
-                    class="text-emerald-600 flex justify-center md:justify-start"
+                    class="text-emerald-50 flex justify-center md:justify-start"
                     target="_blank"
                   >
-                    <img
-                      src="/icofont/tripadvisor-logo.svg"
-                      alt=""
-                      class="w-5 mr-1"
-                    />
-                    My Tour Bali
+                    <i class="bi bi-twitter-x mr-1"></i>
+                    @loka-bali
+                  </a>
+                </p>
+                <p class="mb-4 block">
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
+                    class="text-emerald-50 flex justify-center md:justify-start"
+                    target="_blank"
+                  >
+                    <i class="bi bi-threads mr-1"></i>
+                    @loka.bali
                   </a>
                 </p>
               </div>
-              <div class="mt-5">
+              <div class="mt-5 text-emerald-50">
                 <h6
-                  class="font-semibold mb-4 flex justify-center md:justify-start text-2xl"
+                  class="font-semibold mb-4 flex justify-center md:justify-start text-2xl text-white"
                 >
                   Contact
                 </h6>
                 <p class="mb-4">
                   <a href="mailto:darma_eka89@yahoo.co.id" class="">
-                    <i class="icofont-email"></i> darma_eka89@yahoo.co.id</a
+                    <i class="icofont-email"></i> hi@loka-bali.com</a
                   >
                 </p>
                 <p class="mb-4">
                   <a href="https://wa.me/6285888821190" class="">
-                    <i class="icofont-whatsapp"></i> +62-858-8882-1190
+                    <i class="icofont-whatsapp"></i> +62-858-8882-1190 (Sarah)
                   </a>
                 </p>
                 <p class="mb-4">
@@ -1165,10 +1196,10 @@
         </div>
       </div>
       <div
-        class="text-center p-6 bg-gray-900 line border-t-2 border-emerald-100"
+        class="text-center p-6 bg-emerald-950 line border-t-2 border-emerald-100 text-base"
       >
-        <span>© 2023 Copyright:</span>
-        <a class="text-emerald-600 font-semibold" href="/">My Tour Bali</a>
+        <span>© 2024 Copyright:</span>
+        <a class="text-emerald-600 font-semibold" href="/">Loka Bali</a>
       </div>
     </footer>
     <!-- end footer -->
