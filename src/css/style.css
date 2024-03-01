@@ -1364,8 +1364,17 @@ video {
   padding-top: 2rem;
 }
 
+
 .text-left {
   text-align: left;
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+
 }
 
 .text-center {
