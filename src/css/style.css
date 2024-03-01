@@ -858,12 +858,20 @@ video {
   margin-top: 24rem;
 }
 
-.block {
-  display: block;
+.mt-52 {
+  margin-top: 13rem;
 }
 
-.inline-block {
-  display: inline-block;
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
