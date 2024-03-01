@@ -58,6 +58,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- icon -->
     <link
       rel="stylesheet"
@@ -549,17 +551,17 @@
     <div
       class="bg-[url('/src/img/jumbotron-lg.webp')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-gradient-to-b after:from-black/30 -z-10"
     >
-      <div class="container mx-auto z-50 text-center">
-        <p class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10">
+      <div class="container mx-auto z-50 text-center " >
+        <p class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10" data-aos="fade-up" data-aos-duration="1500">
           explore
         </p>
-        <h1 class="text-5xl md:text-6xl text-white leading-relaxed font-title">
+        <h1 class="text-5xl md:text-6xl text-white leading-relaxed font-title" data-aos="fade-up" data-aos-duration="2000">
           Hidden Gems Bali
         </h1>
-        <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
+        <div class="line-pattern mx-auto mt-1 md:mt-3" data-aos="fade-up" data-aos-duration="2900"></div>
         <a
           href=""
-          class="absolute bottom-10 text-white text-base font-body left-4 md:left-14"
+          class="absolute bottom-10 text-white text-base font-body left-4 md:left-14" 
           ><i class="bi bi-geo-alt"></i> Tegalalang Rice Terrace</a
         >
         <div class="scroll-downs bottom-1 right-3 hidden lg:block">
@@ -576,9 +578,9 @@
       class="flex flex-col md:flex-row justify-center items-center py-14 md:py-24 -mt-5 lg:mt-0 rounded-2xl lg:rounded-none px-4 md:px-12 bg-white"
     >
       <div class="line-pattern -mt-10 mb-10 block md:hidden"></div>
-      <div class="mb-5 w-full md:w-1/2">
+      <div class="mb-5 w-full md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
         <div
-          class="font-subtitle mb-2 text-xl font-semibold md:text-2xl lg:text-3xl lg:mb-4"
+          class="font-subtitle mb-2 text-xl font-semibold md:text-2xl lg:text-3xl lg:mb-4" 
         >
           Explore: The iconic art village Ubud
         </div>
@@ -593,7 +595,7 @@
         </div>
       </div>
       <div
-        class="flex justify-center items-center w-full h-56 md:w-1/2 relative md:ms-6 md:h-48 lg:h-64 xl:h-80 xl:ms-10"
+        class="flex justify-center items-center w-full h-56 md:w-1/2 relative md:ms-6 md:h-48 lg:h-64 xl:h-80 xl:ms-10" data-aos="zoom-in" data-aos-duration="2000"
       >
         <img
           src="src/img/campuhan-ridge-walk.webp"
@@ -620,7 +622,7 @@
         <div class="flex justify-between w-full">
           <div class="flex justify-start">
             <div
-              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="800"
             >
               Loka Itineraries
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -639,17 +641,18 @@
       <div
         class="swiper mySwiperGrab mt-10"
         x-data="{ eats: [
-              {id: 1, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
-              {id: 2, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
-              {id: 3, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
-              {id: 4, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
+              {id: 1, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1000},
+              {id: 2, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1400},
+              {id: 3, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1800},
+              {id: 4, title: 'Spiritual Expirience', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 2200},
             ] }"
       >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
             <div
-              class="swiper-slide cursor-pointer rounded-lg drop-shadow-lg group bg-white relative group overflow-hidden mb-20"
+              class="swiper-slide cursor-pointer rounded-lg drop-shadow-lg group relative group overflow-hidden mb-20" 
             >
+            <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
               <div
                 class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10 group-hover:scale-105 transition-all duration-300 ease-in-out rounded-lg"
               ></div>
@@ -666,6 +669,7 @@
                 alt=""
                 class="rounded-lg w-full group-hover:scale-105 transition-all duration-300 ease-in-out"
               />
+            </div>
             </div>
           </template>
         </div>
@@ -693,7 +697,7 @@
         <div class="flex justify-between relative w-full">
           <div class="flex justify-start">
             <div
-              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="800"
             >
               Today Ceremony
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -712,23 +716,24 @@
       <div
         class="swiper mySwiperGrab mt-10"
         x-data="{ eats: [
-              {id: 1, title: 'Ngaben', img: 'src/img/ngaben.png', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.'},
-              {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.'},
-              {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.'},
-              {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.'},
+              {id: 1, title: 'Ngaben', img: 'src/img/ngaben.png', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 1000},
+              {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 1400 },
+              {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 1800},
+              {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Ngaben is a traditional Balinese Hindu funeral ritual in Bali, involving the cremation of the deceased as a means of releasing their soul from the body and facilitating its journey to the afterlife.', dur: 2200},
             ] }"
       >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
             <div
-              class="swiper-slide cursor-pointer mb-10 rounded-lg shadow-sm md:shadow-md group bg-white"
+              class="swiper-slide cursor-pointer mb-10 rounded-lg  group"
             >
+            <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
               <img
                 :src="eat.img"
                 alt=""
                 class="rounded-t-lg w-full h-48 object-cover"
               />
-              <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7">
+              <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7 shadow-sm md:shadow-md rounded-lg">
                 <div class="flex justify-between mb-2 items-center">
                   <div
                     class="font-subtitle text-lg xl:text-xl"
@@ -747,6 +752,7 @@
                 ></div>
               </div>
             </div>
+            </div>
           </template>
         </div>
         <div
@@ -762,7 +768,7 @@
     >
       <div class="flex justify-start">
         <div
-          class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+          class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-up" data-aos-duration="800"
         >
           Read Our Blog
           <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -773,7 +779,7 @@
       >
         <a
           href="ubud.html"
-          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative group"
+          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 lg:row-span-5 rounded-xl overflow-hidden relative group" data-aos="fade-up" data-aos-duration="1000"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -802,7 +808,7 @@
         </a>
         <a
           href="blog.html"
-          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group"
+          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group" data-aos="fade-up" data-aos-duration="1500"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -831,7 +837,7 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
+          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group" data-aos="fade-up" data-aos-duration="2000"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -860,7 +866,7 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
+          class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group" data-aos="fade-up" data-aos-duration="2500"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -889,7 +895,7 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
+          class="col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group" data-aos="fade-up" data-aos-duration="3000"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -918,7 +924,7 @@
         </a>
         <a
           href=""
-          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group"
+          class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group" data-aos="fade-up" data-aos-duration="2800"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -949,7 +955,7 @@
       <div class="flex justify-center">
         <a
           href=""
-          class="font-body text-sm bg-emerald-50 outline outline-strong rounded-md px-2 py-1 md:text-lg lg:text-xl lg:px-4 lg:py-2"
+          class="font-body text-sm bg-emerald-50 outline outline-strong rounded-md px-2 py-1 md:text-lg lg:text-xl lg:px-4 lg:py-2" 
           >explore more...</a
         >
       </div>
@@ -974,7 +980,7 @@
         >
           <div class="flex justify-start">
             <div
-              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500"
             >
               Explore More
               <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
@@ -992,17 +998,18 @@
         <div
           class="swiper adventureSwiper mt-10"
           x-data="{ eats: [
-                  {id: 1, title: 'Ubud: Art Village ', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 2, title: 'K-Club Jimbaran', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 3, title: 'K-Club Delights', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 4, title: 'K-Club each', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 1, title: 'Ubud: Art Village ', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1500},
+                  {id: 2, title: 'K-Club Jimbaran', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 2000},
+                  {id: 3, title: 'K-Club Delights', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 2500},
+                  {id: 4, title: 'K-Club each', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 3000},
                 ] }"
         >
           <div class="swiper-wrapper pl-7 lg:pl-20">
             <template x-for="eat in eats" :key="eat.id">
               <div
-                class="swiper-slide cursor-pointer mb-5 rounded-lg drop-shadow-xl group bg-white overflow-hidden relative"
+                class="swiper-slide cursor-pointer mb-5 rounded-lg drop-shadow-xl group overflow-hidden relative" 
               >
+              <div data-aos="fade-up" :data-aos-duration="eat.dur" data-aos-delay="500">
                 <div
                   class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10"
                 ></div>
@@ -1021,6 +1028,7 @@
                   class="rounded-lg w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out"
                   style="transform-origin: center"
                 />
+              </div>
               </div>
             </template>
           </div>
@@ -1166,6 +1174,10 @@
     <!-- end footer -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
       var swiper = new Swiper(".mySwiperCard", {
         effect: "cards",
