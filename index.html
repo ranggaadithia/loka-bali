@@ -641,10 +641,10 @@
       <div
         class="swiper mySwiperGrab mt-10"
         x-data="{ eats: [
-              {id: 1, title: 'Hidden Beach', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/felfin-felfin-5MV818tzxeo-unsplash.webp?alt=media&token=f2f012ea-482f-41f4-8165-621a3521216b', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 5 places'},
-              {id: 2, title: 'Spiritual Journey', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/priyank-pathak-trw_VfOqO2I-unsplash-_1_.webp?alt=media&token=939a9fd2-d790-448e-8730-e07e04808e6f', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 5 places'},
-              {id: 3, title: 'Bali Eco Adventure', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
-              {id: 4, title: 'Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/hugo-villegas-gJiG3zJZmr8-unsplash.webp?alt=media&token=ac329040-9e9f-490d-800f-6e57133ae58a', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places'},
+              {id: 1, title: 'Hidden Beach', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/felfin-felfin-5MV818tzxeo-unsplash.webp?alt=media&token=f2f012ea-482f-41f4-8165-621a3521216b', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 5 places', dur: 1000},
+              {id: 2, title: 'Spiritual Journey', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/priyank-pathak-trw_VfOqO2I-unsplash-_1_.webp?alt=media&token=939a9fd2-d790-448e-8730-e07e04808e6f', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 5 places', dur: 1400},
+              {id: 3, title: 'Bali Eco Adventure', img: 'src/img/jatiluwih.jpg', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 1800},
+              {id: 4, title: 'Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/hugo-villegas-gJiG3zJZmr8-unsplash.webp?alt=media&token=ac329040-9e9f-490d-800f-6e57133ae58a', price: '&lt;i class=&quot;fa-solid fa-location-dot m-1&quot;&gt;&lt;/i&gt; 7 places', dur: 2200},
             ] }"
       >
         <div class="swiper-wrapper">
@@ -726,7 +726,7 @@
               {id: 2, title: 'Pengerupukan', img: 'src/img/pengerupuk.jpeg', price: 'Pengerupukan Pengerupukan, also known as Nyepi eve, is a significant cultural event in Bali, Indonesia, marking the eve of Nyepi, the Balinese Hindu New Year. It involves elaborate rituals and ceremonies aimed at purification' , clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6PM - 12AM'},
               {id: 3, title: 'Melasti', img: 'src/img/Melasti.webp', price: 'Melasti is a sacred Balinese Hindu ritual conducted annually in the days leading up to Nyepi, the Balinese Hindu New Year. This ceremony is a vital part of the purification process before Nyepi, aimed at cleansing the soul and the environment from impurities. During Melasti, worshippers gather at nearby water sources such as rivers or the sea, carrying sacred temple objects and effigies of gods and goddesses.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 6AM - 1PM'},
               {id: 4, title: 'Odalan', img: 'src/img/odalan.jpeg', price: 'Odalan is a traditional Balinese Hindu ceremony celebrated at temples throughout Bali to honor the deities and commemorate the temple\'s anniversary. This ritual is an essential aspect of Balinese Hindu culture, highlighting the deep reverence and devotion to the gods. The timing of Odalan varies from temple to temple, as it follows the Balinese calendar, which is based on a 210-day cycle. During Odalan, elaborate preparations are made, including cleaning and decorating the temple, preparing offerings, and organizing cultural performances such as traditional dances and music. The main ceremony involves prayers, chants, and rituals conducted by Hindu priests, accompanied by the offering of various items such as fruits, flowers, and incense to the deities. Odalan is a time for the community to come together in worship, celebration, and cultural expression, reinforcing bonds within the community and reaffirming their spiritual connection to the divine.',  clock: '&lt;i class=&quot;fa-regular fa-clock mr-1&quot;&gt;&lt;/i&gt; 10AM - 3PM'},
-      >
+            ] }">
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
             <div
