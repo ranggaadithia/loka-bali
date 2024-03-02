@@ -63,7 +63,7 @@
     />
     <link rel="stylesheet" href="src/js/script.js" />
   </head>
-  <body class="bg-white custom-scrollbar">
+  <body class="bg-white custom-scrollbar relative font-body">
     <!-- navbar start-->
     <div
       class="navbar fixed w-full top-0 z-[999] transition-all duration-1000 ease-in-out"
@@ -546,20 +546,20 @@
 
     <!-- Jumbotron -->
     <div
-      class="bg-[url('/src/img/jumbotron-lg.webp')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-gradient-to-b after:from-black/30 -z-10"
+      class="bg-[url('/src/img/ubud-bg.jpg')] min-w-screen h-screen bg-cover bg-no-repeat bg-fixed bg-left lg:bg-center relative flex items-center justify-center flex-col after:content-[''] after:block after:w-full after:h-screen after:absolute after:top-0 after:bg-black/35 -z-10"
     >
       <div class="container mx-auto z-50 text-center">
         <p class="text-white text-xl md:text-2xl font-subtitle -mt-10 mb-10">
           explore
         </p>
         <h1 class="text-5xl md:text-6xl text-white leading-relaxed font-title">
-          Ubud Art Villager
+          Ubud Art Village
         </h1>
         <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
         <a
           href=""
           class="absolute bottom-10 text-white text-base font-body left-4 md:left-14"
-          ><i class="bi bi-geo-alt"></i> Tegalalang Rice Terrace</a
+          ><i class="bi bi-geo-alt"></i> Puri Agung Ubud</a
         >
         <div class="scroll-downs bottom-1 right-3 hidden lg:block">
           <div class="mousey">
@@ -581,9 +581,7 @@
         >
           Explore: The iconic art village Ubud
         </div>
-        <div
-          class="font-body text-xs text-justify font-extralight lg:text-base"
-        >
+        <div class="font-body text-xs font-extralight lg:text-base">
           Ubud is an iconic art village located in Bali, Indonesia. Renowned for
           its breathtaking natural beauty, Ubud also serves as a hub for arts,
           culture, and spirituality in Bali. The village is filled with art
@@ -782,7 +780,80 @@
     <!-- Hidden gems end -->
 
     <!-- Local flavors start -->
-    <div class="p-7 lg:p-10 xl:p-20 relative">
+    <div x-data="{open: false}" class="p-7 lg:p-10 xl:p-20 relative">
+      <div
+        x-show="open"
+        @keydown.escape.window="open = false"
+        class="fixed inset-0 z-[999] flex items-end md:items-center justify-center bg-black/40 backdrop-blur-md transito"
+      >
+        <div
+          x-show="open"
+          x-transition:enter="transition-all duration-500 md:duration-300 ease-out"
+          x-transition:enter-start="-mb-[100%] lg:opacity-0 lg:scale-95"
+          x-transition:enter-end="mb-0 lg:opacity-100 lg:scale-100"
+          @click.away="open = false"
+          class="md:w-full md:mx-3 lg:w-3/5 lg:h-3/5 bg-white mx-auto drop-shadow-2xl flex flex-col md:flex-row rounded-b-none rounded-2xl md:rounded-b-2xl overflow-hidden"
+        >
+          <div class="w-full md:w-3/5">
+            <img
+              src="https://lh3.googleusercontent.com/p/AF1QipN0DNI73ajv9wsdIomcum9lxt8aZVOhkEW-3kID=s1360-w1360-h1020"
+              class="h-full object-cover"
+              loading="eager"
+              alt=""
+            />
+          </div>
+          <div class="w-full md:w-2/5 relative">
+            <div
+              class="flex justify-between items-center bg-white border-b-2 px-3 py-2"
+            >
+              <span class="font-subtitle font-semibold text-xl"
+                >Warung Makan Bu Rus</span
+              >
+              <span class="text-sm font-semibold text-strong"
+                ><i class="bi bi-star-fill"></i> 4.6</span
+              >
+            </div>
+            <div class="p-3 flex justify-between items-center">
+              <div class="text-sm text-strong font-semibold text-left">
+                <i class="fa-solid fa-clock"></i> 11:00-21:30
+              </div>
+              <div class="text-sm text-left text-strong font-semibold">
+                Rp. 15k-125K
+              </div>
+            </div>
+            <div class="px-3 text-sm mt-3">
+              <p>
+                Traditional Balinese food in a simple restaurant with a
+                luxurious terrace and large garden.
+              </p>
+              <p class="mt-2">
+                <span class="font-semibold">Service options:</span> Provides
+                outdoor seating · Serves vegetarian dishes
+              </p>
+              <p class="mt-2">
+                <span class="font-semibold">Top Menu:</span> Nasi Campur, Ayam
+                Betutu, Bebek, Ikan Bakar, Sate Lilit.
+              </p>
+            </div>
+            <div
+              class="static mt-10 md:mt-0 md:absolute bottom-0 w-full border-t-2 flex justify-between items-center bg-white drop-shadow-md px-3 py-3"
+            >
+              <a
+                href="https://g.co/kgs/AE55edE"
+                target="_blank"
+                class="px-3 py-2 rounded-full border-2 border-strong text-strong font-medium"
+                ><i class="fa-solid fa-map"></i> Google Maps</a
+              >
+              <a
+                href="https://wa.me/6281234567890?text=Hi%2C%20I%20want%20to%20reserve%20a%20table%20for%20tonight%20at%20Warung%20Makan%20Bu%20Rus"
+                target="_blank"
+                class="px-3 py-2 rounded-full border-2 border-strong bg-strong text-white font-medium"
+                ><i class="bi bi-telephone-fill"></i> Reserve</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="flex justify-start">
         <div class="flex justify-between relative w-full">
           <div class="flex justify-start">
@@ -805,51 +876,47 @@
       </div>
       <div
         class="swiper mySwiperGrab mt-10"
-        x-data="{ eats: [
-              {id: 1, title: 'K-Club Ubud', img: 'src/img/k-club.png', price: 'Rp. 1.150k-6.000K'},
-              {id: 2, title: 'K-Club Jimbaran', img: 'src/img/k-club.png', price: 'Rp. 1.150k-6.000K'},
-              {id: 3, title: 'K-Club Delights', img: 'src/img/k-club.png', price: 'Rp. 1.150k-6.000K'},
-              {id: 4, title: 'K-Club each', img: 'src/img/k-club.png', price: 'Rp. 1.150k-6.000K'},
+        x-data="{  eats: [
+              {id: 1, title: 'Warung Makan Bu Rus', img: 'https://lh3.googleusercontent.com/p/AF1QipN0DNI73ajv9wsdIomcum9lxt8aZVOhkEW-3kID=s1360-w1360-h1020', price: 'Rp. 10k-75k', clock: '&lt;i class=&quot;fa-solid fa-clock mt-1&quot;&gt;&lt;/i&gt; 11:00-21:30', maps: 'https://g.co/kgs/AE55edE'},
+              {id: 2, title: 'Kedaton Rumah Makan', img: 'https://lh3.googleusercontent.com/p/AF1QipPLh6Uni0eFtJmPKrdXXr_0K7MkZds2AMA14J0I=s1360-w1360-h1020', price: 'Rp. 7k-45K', clock: '&lt;i class=&quot;fa-solid fa-clock mt-1&quot;&gt;&lt;/i&gt; 08:00-22:00', maps: 'https://g.co/kgs/6XFuaCw'},
+              {id: 3, title: 'Bebek Bengil', img: 'https://lh3.googleusercontent.com/p/AF1QipNwappCoMeEuY4QdCYe66FT-bG4IizU-FO2R2ti=s1360-w1360-h1020', price: 'Rp. 15k-125K', clock: '&lt;i class=&quot;fa-solid fa-clock mt-1&quot;&gt;&lt;/i&gt; 10:00-22:00', maps: 'https://g.co/kgs/qh981ED'},
+              {id: 4, title: 'Ubud Waroeng (Vegan)', img: 'https://lh3.googleusercontent.com/p/AF1QipPBoEwf43dTgiSOUyw0c6Cluf1M0red8JFeSt_H=s1360-w1360-h1020', price: 'Rp. 25k-75k', clock: '&lt;i class=&quot;fa-solid fa-clock mt-1&quot;&gt;&lt;/i&gt; 08:00-23:00', maps: 'https://g.co/kgs/gucvtA1'},
             ] }"
       >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
-            <div
+            <button
+              x-on:click="open = !open"
               class="swiper-slide cursor-pointer mb-10 rounded-lg drop-shadow-lg group bg-white"
             >
-              <img
-                src="src/img/k-club.png"
-                alt=""
-                class="rounded-t-lg w-full"
-              />
+              <img :src="eat.img" alt="" class="rounded-t-lg w-full" />
               <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7">
                 <div
-                  class="flex text-emerald-900 text-xs xl:text-sm mb-2 xl:mb-3"
-                >
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="flex justify-between">
-                  <div class="font-subtitle text-lg xl:text-xl">
-                    K-Club Ubud
-                  </div>
+                  class="text-sm text-strong font-semibold text-left"
+                  x-html="eat.clock"
+                ></div>
+                <div class="flex justify-between my-1">
+                  <div
+                    class="font-subtitle font-semibold text-lg xl:text-xl"
+                    x-text="eat.title"
+                  ></div>
                   <a
-                    href=""
+                    :href="eat.maps"
+                    target="_blank"
                     class="text-strong w-10 h-10 flex items-center justify-center rounded-full hover:text-strong hover:bg-secondary/20 transition-all duration-100 ease-in-out"
                   >
                     <i class="fa-regular fa-map xl:text-xl"></i>
                   </a>
                 </div>
-                <div class="text-xs text-slate-500 xl:text-sm -mt-2 md:-mt-3">
-                  Rp. 1.150k-6.000K
-                </div>
+                <div
+                  class="text-xs text-left text-slate-500 xl:text-sm -mt-2 md:-mt-3"
+                  x-text="eat.price"
+                ></div>
               </div>
-            </div>
+            </button>
           </template>
         </div>
+
         <div
           class="swiper-pagination flex justify-start items-center pt-10 md:hidden"
         ></div>
@@ -881,10 +948,10 @@
         <div
           class="swiper adventureSwiper mt-10"
           x-data="{ eats: [
-                  {id: 1, title: 'ATV & Water Sport', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 2, title: 'K-Club Jimbaran', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 3, title: 'K-Club Delights', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
-                  {id: 4, title: 'K-Club each', img: 'src/img/atv.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 1, title: 'Balinese Cooking Class', img: 'src/img/cooking.webp', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2 hours'},
+                  {id: 2, title: 'Rice Terrace Trekking', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/jane-palash-_Ij4zo7Fp-c-unsplash.webp?alt=media&token=0dd701ee-6290-44da-a646-8cce333c8386', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
+                  {id: 3, title: 'Learn Balinese Traditional Dance', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/Snapinsta.app_375966660_17991610076269558_2538512419646957221_n_1080-_1_.webp?alt=media&token=b8381680-90d8-4dc3-abad-51c69c206ed1', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1-1.5 hours'},
+                  {id: 4, title: 'Cycle Through Ubud\'s Countryside', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/0214-0531_downhill-cycling-tour-ubud-lake-batur-indonesia-pelago6.jpeg?alt=media&token=f3f6c8fe-ef7d-4f72-9101-041d84de3bca', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours'},
                 ] }"
         >
           <div class="swiper-wrapper">
@@ -900,7 +967,7 @@
                   x-text="eat.title"
                 ></div>
                 <div
-                  class="absolute text-white bottom-0 opacity-0 group-hover:bottom-4 group-hover:opacity-100 left-4 font-body text-sm md:text-lg lg:text-lg font-light transition-all duration-300 ease-in-out z-10"
+                  class="absolute text-white bottom-0 opacity-0 group-hover:bottom-4 group-hover:opacity-100 left-4 font-body text-sm md:text-base font-medium transition-all duration-300 ease-in-out z-10"
                   x-html="eat.price"
                 ></div>
                 <a
@@ -943,25 +1010,30 @@
 
     <!-- Instagram start -->
     <div
-      class="font-subtitle px-7 text-xl font-semibold md:px-10 md:text-2xl lg:text-3xl xl:text-4xl mt-10"
+      class="font-subtitle px-5 md: text-xl font-semibold md:px-5 md:text-2xl lg:text-3xl xl:text-4xl mt-10"
     >
       #ubud
     </div>
     <div
       x-data="{ insta: [
       {id: 1, img: 'src/img/insta1.png'},
-      {id: 2, img: 'src/img/insta2.png'},
-      {id: 3, img: 'src/img/insta3.png'},
-      {id: 4, img: 'src/img/insta4.png'},
-      {id: 5, img: 'src/img/insta5.png'},
       {id: 6, img: 'src/img/insta6.png'},
       {id: 7, img: 'src/img/insta7.png'},
       {id: 8, img: 'src/img/insta8.png'},
+      {id: 9, img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/0214-0531_downhill-cycling-tour-ubud-lake-batur-indonesia-pelago6.jpeg?alt=media&token=f3f6c8fe-ef7d-4f72-9101-041d84de3bca'},
+      {id: 10, img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/Snapinsta.app_375966660_17991610076269558_2538512419646957221_n_1080-_1_.webp?alt=media&token=b8381680-90d8-4dc3-abad-51c69c206ed1'},
+      {id: 11, img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/jane-palash-_Ij4zo7Fp-c-unsplash.webp?alt=media&token=0dd701ee-6290-44da-a646-8cce333c8386'},
+      {id: 12, img: 'src/img/campuhan-ridge-walk.webp'},
+      {id: 13, img: 'src/img/atv.jpg'},
+      {id: 14, img: 'src/img/ubud-bg.jpg'}
        ]}"
-      class="grid grid-cols-2 grid-rows-4 p-5 gap-4 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-5 lg:grid-rows-2 px-7 md:px-10"
+      class="grid grid-cols-2 grid-rows-4 p-5 gap-4 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-5 lg:grid-rows-2 py-7 lg:py-10 xl:py-20"
     >
       <template x-for="ig in insta" :key="ig.id">
-        <div class="mx-auto relative text-white rounded-lg overflow-hidden">
+        <button
+          :id="ig.id"
+          class="mx-auto relative text-white rounded-lg overflow-hidden"
+        >
           <a href="" class="absolute top-0 right-1 z-20"
             ><i class="fa-brands fa-instagram text-2xl"></i
           ></a>
@@ -972,10 +1044,248 @@
             alt=""
             class="w-full h-full object-cover"
           />
-        </div>
+        </button>
       </template>
     </div>
     <!-- Instagram end -->
+
+    <!-- Explore More -->
+    <div class="relative overflow-hidden py-7 lg:py-10 xl:py-20 bg-emerald-50">
+      <div class="overflow-hidden">
+        <div
+          class="flex justify-between relative w-full px-7 lg:px-10 xl:px-20"
+        >
+          <div class="flex justify-start">
+            <div
+              class="font-subtitle text-xl font-semibold md:text-2xl mb-1 md:mb-2 lg:text-3xl xl:text-4xl"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              Explore More
+              <div class="line-pattern mx-auto mt-1 md:mt-3"></div>
+            </div>
+          </div>
+          <div class="w-24 justify-between items-center hidden md:flex">
+            <div
+              class="swiper-button-prev-adv !static bg-white px-5 rounded-md h-10"
+            ></div>
+            <div
+              class="swiper-button-next-adv !static bg-white px-5 rounded-md swiper-button-disabled h-10"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="swiper adventureSwiper mt-10"
+          x-data="{ eats: [
+                      {id: 1, title: 'Denpasar: Gateway to Bali', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/harfian-ananta-daffa-NooiiPQWlWA-unsplash_1.webp?alt=media&token=e4dd683d-ace4-42cf-83e4-1391ba813449', price: '&lt;i class=&quot;bi bi-clock m-1&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1000},
+                      {id: 2, title: 'Ubud: Art Village', img: 'src/img/ubud.jpg', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1400},
+                      {id: 3, title: 'Amed: Bali\'s Diving Paradise', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/spenser-sembrat-w4SMIMJNmP8-unsplash.webp?alt=media&token=3517b573-f546-4af0-a74f-bd142a84d25d', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 1800},
+                      {id: 4, title: 'Kintamani: Mountain Majesty', img: 'https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/aditya-putra-PKdTw9neDHc-unsplash-_1_.webp?alt=media&token=05b17a11-f4ae-4863-85a6-9a01e68c801b', price: '&lt;i class=&quot;bi bi-clock&quot;&gt;&lt;/i&gt; 1.5-2.5 hours', dur: 2200},
+    
+                    ] }"
+        >
+          <div class="swiper-wrapper pl-7 lg:pl-20">
+            <template x-for="eat in eats" :key="eat.id">
+              <a
+                href="/ubud.html"
+                class="swiper-slide cursor-pointer mb-5 rounded-lg group bg-white overflow-hidden relative"
+              >
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  :data-aos-delay="eat.dur"
+                  class="drop-shadow-xl"
+                >
+                  <div
+                    class="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black opacity-80 z-10"
+                  ></div>
+                  <div
+                    class="absolute text-white bottom-4 font-subtitle md:text-lg lg:text-2xl font-semibold z-10 w-full flex justify-between px-3 items-center"
+                  >
+                    <span x-text="eat.title"></span>
+                    <i
+                      class="fa-solid fa-arrow-right mr-3 group-hover:mr-0 transition-all duration-200 ease-in-out"
+                    ></i>
+                  </div>
+
+                  <img
+                    :src="eat.img"
+                    alt=""
+                    class="rounded-lg w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out"
+                    style="transform-origin: center"
+                  />
+                </div>
+              </a>
+            </template>
+          </div>
+        </div>
+
+        <img
+          src="src/img/Frame.png"
+          alt=""
+          class="opacity-45 absolute -top-16 -right-36 rotate-45 md:-top-36 md:-right-64 lg:-top-64 lg:-right-80 block md:hidden"
+        />
+        <img
+          src="src/img/Frame.png"
+          alt=""
+          class="absolute w-full lg:w-1/2 left-2 -bottom-10 opacity-45 md:-bottom-56 lg:-bottom-40 hidden md:block"
+        />
+        <img
+          src="src/img/Frame.png"
+          alt=""
+          class="absolute hidden lg:block lg:w-1/2 right-0 -bottom-10 opacity-45 md:-bottom-56 lg:-bottom-40"
+        />
+        <div class="swiper-pagination-adv md:hidden pl-7 lg:pl-20"></div>
+      </div>
+    </div>
+    <!-- Local Explore more -->
+
+    <!-- footer -->
+    <footer
+      class="text-center lg:text-left bg-emerald-950 text-gray-100 font-body text-sm"
+    >
+      <div class="mx-10 lg:px-15 py-10 text-center md:text-left">
+        <div
+          class="flex flex-col md:flex-col lg:flex-row mx-auto md:justify-between lg:items-center"
+        >
+          <div class="basis-1/3 flex flex-col md:px-32 lg:px-0">
+            <h6 class="mb-4 font-title text-4xl md:text-center lg:text-left">
+              Loka Bali
+            </h6>
+            <div class="line-pattern mx-auto lg:ml-7 mb-10"></div>
+            <p
+              class="-mt-5 text-sm md:text-base md:text-center lg:text-left font-body"
+            >
+              Connect you to the best authentic experiences in Bali. Finding
+              Hidden Gems, Local Culture, and Adventure.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row basis-1/2 lg:justify-between md:justify-around md:mt-10"
+          >
+            <div class="flex flex-col">
+              <div class="mt-10 md:mt-5">
+                <h6
+                  class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
+                >
+                  Contribute With Us
+                </h6>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Become Partner</a>
+                </p>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Business Partner</a>
+                </p>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Event</a>
+                </p>
+              </div>
+              <div class="mt-5">
+                <h6
+                  class="font-semibold font-subtitle mb-4 flex justify-center md:justify-start text-2xl"
+                >
+                  Useful Links
+                </h6>
+
+                <p class="mb-4">
+                  <a href="/#services" class="text-emerald-50"
+                    >Top Destination</a
+                  >
+                </p>
+                <p class="mb-4">
+                  <a href="/#destinations" class="text-emerald-50"
+                    >Top Activities</a
+                  >
+                </p>
+                <p class="mb-4">
+                  <a href="/#tour-packages" class="text-emerald-50"
+                    >Travel Tips</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-col">
+              <div class="mt-5">
+                <h6
+                  class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
+                >
+                  Social Media
+                </h6>
+                <p class="mb-4">
+                  <a
+                    href="https://instagram.com/balidriverputu?igshid=ZDdkNTZiNTM="
+                    class="text-emerald-50"
+                    target="_blank"
+                    ><i class="bi bi-instagram mr-1"></i> loka.bali</a
+                  >
+                </p>
+                <p class="mb-4">
+                  <a
+                    href="https://www.facebook.com/putu.balidriver.3?mibextid=ZbWKwL"
+                    class="text-emerald-50"
+                    target="_blank"
+                  >
+                    <i class="bi bi-facebook mr-1"></i> Loka Bali</a
+                  >
+                </p>
+                <p class="mb-4 block">
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
+                    class="text-emerald-50 flex justify-center md:justify-start"
+                    target="_blank"
+                  >
+                    <i class="bi bi-twitter-x mr-1"></i>
+                    @loka-bali
+                  </a>
+                </p>
+                <p class="mb-4 block">
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
+                    class="text-emerald-50 flex justify-center md:justify-start"
+                    target="_blank"
+                  >
+                    <i class="bi bi-threads mr-1"></i>
+                    @loka.bali
+                  </a>
+                </p>
+              </div>
+              <div class="mt-5 text-emerald-50">
+                <h6
+                  class="font-semibold mb-4 flex justify-center md:justify-start text-2xl text-white"
+                >
+                  Contact
+                </h6>
+                <p class="mb-4">
+                  <a href="mailto:darma_eka89@yahoo.co.id" class="">
+                    <i class="icofont-email"></i> hi@loka-bali.com</a
+                  >
+                </p>
+                <p class="mb-4">
+                  <a href="https://wa.me/6285888821190" class="">
+                    <i class="icofont-whatsapp"></i> +62-858-8882-1190 (Sarah)
+                  </a>
+                </p>
+                <p class="mb-4">
+                  <a href="https://wa.me/6285737691010" class="">
+                    <i class="icofont-whatsapp"></i>
+                    +62-857-3769-1010 (Putu)
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-center p-6 bg-emerald-950 line border-t-2 border-emerald-100 text-base"
+      >
+        <span>© 2024 Copyright:</span>
+        <a class="text-emerald-600 font-semibold" href="/">Loka Bali</a>
+      </div>
+    </footer>
+    <!-- end footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/js/script.js"></script>
@@ -1031,6 +1341,9 @@
           },
         },
       });
+
+      const ig = document.getElementById(14);
+      ig.classList.add("md:hidden", "lg:block");
     </script>
   </body>
 </html>
