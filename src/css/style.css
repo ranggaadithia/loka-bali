@@ -822,6 +822,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-52 {
+  margin-bottom: 13rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -932,6 +936,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[40vh\] {
+  height: 40vh;
 }
 
 .w-1\/4 {
@@ -1225,12 +1233,12 @@ video {
   background-image: url('/src/img/jumbotron-lg.webp');
 }
 
-.bg-\[url\(\'\/src\/img\/lempuyang\.webp\'\)\] {
-  background-image: url('/src/img/lempuyang.webp');
-}
-
 .bg-\[url\(\'\/src\/img\/ubud-bg\.jpg\'\)\] {
   background-image: url('/src/img/ubud-bg.jpg');
+}
+
+.bg-\[url\(\'https\:\/\/firebasestorage\.googleapis\.com\/v0\/b\/loka-bali\.appspot\.com\/o\/florian-giorgio-PSJ-B59f-LE-unsplash\.webp\?alt\=media\&token\=51bfbb71-7efb-49ac-8e89-c87daf31d708\'\)\] {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/loka-bali.appspot.com/o/florian-giorgio-PSJ-B59f-LE-unsplash.webp?alt=media&token=51bfbb71-7efb-49ac-8e89-c87daf31d708');
 }
 
 .bg-gradient-to-t {
@@ -1259,6 +1267,10 @@ video {
   background-position: left;
 }
 
+.bg-right {
+  background-position: right;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
@@ -1273,9 +1285,24 @@ video {
      object-fit: fill;
 }
 
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.object-left-bottom {
+  -o-object-position: left bottom;
+     object-position: left bottom;
 }
 
 .p-3 {
@@ -1378,6 +1405,10 @@ video {
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pt-8 {
@@ -1536,16 +1567,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
 .decoration-primary {
   text-decoration-color: #10b981;
-}
-
-.underline-offset-1 {
-  text-underline-offset: 1px;
 }
 
 .opacity-0 {
@@ -1657,10 +1680,6 @@ video {
   transition-duration: 300ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 .duration-700 {
   transition-duration: 700ms;
 }
@@ -1671,10 +1690,6 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .nav-active {
@@ -1746,10 +1761,6 @@ video {
 .swiper-pagination-bullet-active {
   width: 0.6rem;
   height: 0.6rem;
-}
-
-#map {
-  height: 60vh;
 }
 
 .leaflet-control-attribution {
@@ -2115,6 +2126,14 @@ video {
     height: 16rem;
   }
 
+  .md\:h-\[30vh\] {
+    height: 30vh;
+  }
+
+  .md\:h-\[35vh\] {
+    height: 35vh;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2129,6 +2148,10 @@ video {
 
   .md\:w-3\/5 {
     width: 60%;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
   }
 
   .md\:w-48 {
@@ -2270,10 +2293,6 @@ video {
     line-height: 1.75rem;
   }
 
-  .md\:duration-300 {
-    transition-duration: 300ms;
-  }
-
   .md\:placeholder\:text-xl::-moz-placeholder {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2382,6 +2401,10 @@ video {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-\[60vh\] {
+    height: 60vh;
   }
 
   .lg\:w-1\/2 {
