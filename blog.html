@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loka Bali | Tips</title>
+    <title>Essential Information for Your Bali Trip | Loka Tips</title>
 
-        <!-- favicon -->
-        <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="ico/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="ico/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="ico/favicon-16x16.png"
-      />
-      <link rel="manifest" href="ico/site.webmanifest" />
-      <!-- end favicon -->
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
+    <!-- end favicon -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -134,7 +134,7 @@
        }"
         @mouseover.away="isDestinationOpen = false; isItenaryOpen = false; isTipsOpen = false; isLangOpen = false;"
         x-transition.duration.300ms
-        :class="isSearchOpen || isNavMobOpen ||onScroll ? 'nav-active bg-transparent py-4 border-b-2 border md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black' : 'bg-transparent py-5 md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-white hover:text-black'"
+        class="nav-active bg-transparent py-4 border-b-2 border md:px-12 px-4 transition-all duration-300 ease-in-out hover:bg-white text-black"
       >
         <div class="flex justify-between items-center">
           <!-- brand -->
@@ -567,7 +567,7 @@
     <!-- navbar end -->
 
     <!-- blog -->
-    <div class="px-4 lg:px-[200px] mt-28 lg:mt-32 mb-10">
+    <div class="px-6 md:px-24 lg:px-[200px] mt-28 lg:mt-32 mb-10">
       <div class="text-center mb-10">
         <p>Loka Tips</p>
         <h1 class="text-3xl lg:text-4xl font-bold mt-1">
@@ -577,7 +577,7 @@
       <img
         src="./src/img/blog.jpg"
         alt=""
-        class="rounded-2xl drop-shadow-2xl mb-10"
+        class="rounded-2xl drop-shadow-lg mb-10"
       />
       <p>
         Planning a trip to Bali, Indonesia? Get ready for an unforgettable
@@ -585,6 +585,107 @@
         cuisine, and breathtaking natural wonders. Here's all the essential
         information you need to make the most of your Bali getaway.
       </p>
+      <h3 class="mt-10 font-semibold text-xl md:text-2xl">
+        Temple Etiquette <br />
+      </h3>
+      <p class="my-3">
+        When visiting Balinese temples, it's essential to observe proper
+        etiquette to show respect for the sacredness of the site and the local
+        culture. <br />
+        <br />Firstly, dress modestly by wearing clothing that covers your
+        shoulders and knees. Avoid wearing revealing or beachwear attire out of
+        respect for the religious significance of the temple. Additionally,
+        before entering a temple, you may be required to wear a sarong (a
+        traditional wrap-around cloth) and a sash, which are often provided at
+        the temple entrance.
+      </p>
+      <div class="h-40 md:h-56 overflow-hidden rounded-lg w-full">
+        <img
+          src="src/img/lempuyang.webp"
+          alt=""
+          class="h-full scale-125 w-full object-cover object-bottom drop-shadow-lg"
+        />
+      </div>
+      <p class="my-3">
+        Upon entering the temple grounds, remember to remove your shoes before
+        stepping onto the sacred grounds. Look for signs or follow the lead of
+        locals to determine if this practice applies.<br />
+        <br />
+        Once inside, maintain a quiet and respectful demeanor, refraining from
+        loud conversations, using your phone, or engaging in disruptive
+        behavior. It's important to follow any rituals or ceremonies taking
+        place in the temple, observing quietly and respectfully from a distance.
+        If unsure about proper conduct, follow the lead of locals or ask for
+        guidance from temple staff.
+      </p>
+
+      <h3 class="mt-10 font-semibold text-2xl">Local Cuisine</h3>
+      <div class="flex">
+        <div class="md:w-full my-3">
+          Balinese cuisine is renowned for its bold flavors, aromatic spices,
+          and fresh ingredients. To fully immerse yourself in the culinary
+          delights of Bali, be sure to sample some of the island's signature
+          dishes at local eateries known as warungs. <br /><br />Start your day
+          with a hearty breakfast of nasi goreng (fried rice) or mie goreng
+          (fried noodles) served with a side of sambal (spicy chili paste) and a
+          fried egg on top. <br />
+          <br />
+          <div
+            class="snap flex snap-mandatory overflow-x-scroll hidden-scroll"
+            x-data="{
+        attractions: [
+          {
+            id: 1, 
+            name: 'Kecak Dance, Uluwatu',
+            img: 'src/img/kecak.jpg'
+          },
+          {
+            id: 2,
+            name: 'Fried Noodles at Ubud Waroeng',
+            img: 'https://lh3.googleusercontent.com/p/AF1QipPBoEwf43dTgiSOUyw0c6Cluf1M0red8JFeSt_H=s1360-w1360-h1020'
+          },
+          {
+            id: 3,
+            name: 'Barong and Keris Dance, Batubulan',
+            img: 'src/img/barong.jpg'
+          },
+          {
+            id: 4,
+            name: 'Shadow Puppet (Wayang Kulit), Bangli', 
+            img: 'src/img/wayang.jpg' 
+          }
+
+        ]
+      }"
+          >
+            <template x-for="attraction in attractions" :key="attraction.id">
+              <div
+                class="snap-center drop-shadow-md mx-1 lg:mx-3 w-9/5 bg-white w-fit shrink-0 rounded-md overflow-hidden relative h-40 lg:h-52"
+              >
+                <img
+                  :src="attraction.img"
+                  alt=""
+                  loading="lazy"
+                  class="w-72 md:w-96 object-cover object-center h-full"
+                />
+                <div
+                  class="absolute w-full h-1/4 bottom-0 bg-gradient-to-t from-black opacity-50 z-10"
+                ></div>
+                <div
+                  class="absolute text-white bottom-1 left-1 text-sm z-10 w-full"
+                >
+                  <span x-text="attraction.name"></span>
+                </div>
+              </div>
+            </template>
+          </div>
+          <br />
+          For lunch or dinner, don't miss the opportunity to try babi guling
+          (suckling pig), a Balinese specialty consisting of roasted pig stuffed
+          with a blend of spices and served with rice, lawar (a traditional
+          vegetable salad), and sambal matah (a spicy chili relish).
+        </div>
+      </div>
       <h3 class="mt-5 font-semibold text-xl">Explore Local Attractions</h3>
 
       <ul class="list-disc list-outside my-3 px-4">
@@ -616,7 +717,7 @@
         </li>
       </ul>
       <div
-        class="snap flex snap-mandatory overflow-x-scroll custom-scrollbar"
+        class="snap flex snap-mandatory overflow-x-scroll hidden-scroll"
         x-data="{
         attractions: [
           {
@@ -664,187 +765,153 @@
           </div>
         </template>
       </div>
-      <h3 class="mt-5">The Process</h3>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum assumenda
-      dolor eius itaque voluptate suscipit sunt possimus obcaecati magnam cumque
-      saepe temporibus cum earum repellat animi quo expedita, necessitatibus
-      quidem sit fuga deleniti ea! Inventore obcaecati ducimus quidem unde
-      neque. Neque, nobis vitae? Sequi blanditiis nostrum eligendi recusandae
-      nisi accusantium rerum, pariatur praesentium, est dolores cum sapiente
-      perspiciatis delectus expedita itaque modi aspernatur laudantium unde
-      suscipit aut odit voluptatibus commodi officia. Distinctio repellendus
-      inventore itaque, quisquam, expedita ullam mollitia alias corrupti
-      exercitationem, sit at cumque quas omnis adipisci sequi modi asperiores
-      dolore nulla nemo fugiat deleniti illum. Sapiente repellendus atque,
-      quisquam possimus nam sequi distinctio. Pariatur aliquam laudantium
-      consectetur dolore consequuntur numquam autem repellat ipsum nam officiis
-      accusantium consequatur sapiente deleniti tempore, totam magnam voluptas!
-      Id quas praesentium quo quos culpa, iure asperiores accusamus odio fugiat
-      iusto explicabo magni ad minima reprehenderit fuga quidem blanditiis ea
-      quae quibusdam magnam cum corrupti! Animi cumque reprehenderit tempore,
-      totam possimus fugit blanditiis quaerat, inventore corrupti vel, sint qui
-      nesciunt facere impedit vero atque quos at libero explicabo voluptatum
-      ipsam in distinctio? Laudantium laborum inventore recusandae nihil
-      numquam, minima obcaecati blanditiis quaerat neque in, enim magnam, rem
-      tempora a vero harum quasi! Tempora modi exercitationem reprehenderit
-      accusamus laboriosam ipsum ea numquam laudantium illum excepturi! Aperiam
-      temporibus neque blanditiis! Quia et accusantium molestiae, sint numquam
-      sapiente ab eaque quibusdam veritatis eius architecto sequi omnis. Rerum
-      dolores quam consequatur iure totam omnis consequuntur quo! Eaque officiis
-      nisi ex esse aspernatur labore, et beatae provident consequatur dolore
-      quis, eius eum? Necessitatibus dignissimos quo aspernatur? In excepturi
-      quibusdam voluptatibus adipisci sunt? Placeat ex at ducimus soluta
-      aspernatur, quam nostrum incidunt ipsam numquam, necessitatibus adipisci
-      doloribus culpa. At nemo deserunt nisi possimus. Maiores veniam inventore
-      perferendis nostrum fugiat dolorum accusantium esse necessitatibus omnis
-      laudantium, magni, modi neque! Quo, ipsum?
     </div>
 
-        <!-- footer -->
-        <footer
-        class="text-center lg:text-left bg-emerald-950 text-gray-100 font-body text-sm"
-      >
-        <div class="mx-10 lg:px-15 py-10 text-center md:text-left">
-          <div
-            class="flex flex-col md:flex-col lg:flex-row mx-auto md:justify-between lg:items-center"
-          >
-            <div class="basis-1/3 flex flex-col md:px-32 lg:px-0">
-              <h6 class="mb-4 font-title text-4xl md:text-center lg:text-left">
-                Loka Bali
-              </h6>
-              <div class="line-pattern mx-auto lg:ml-7 mb-10"></div>
-              <p
-                class="-mt-5 text-sm md:text-base md:text-center lg:text-left font-body"
-              >
-                Connect you to the best authentic experiences in Bali. Finding
-                Hidden Gems, Local Culture, and Adventure.
-              </p>
-            </div>
-  
-            <div
-              class="flex flex-col md:flex-row basis-1/2 lg:justify-between md:justify-around md:mt-10"
+    <!-- footer -->
+    <footer
+      class="text-center lg:text-left bg-emerald-950 text-gray-100 font-body text-sm"
+    >
+      <div class="mx-10 lg:px-15 py-10 text-center md:text-left">
+        <div
+          class="flex flex-col md:flex-col lg:flex-row mx-auto md:justify-between lg:items-center"
+        >
+          <div class="basis-1/3 flex flex-col md:px-32 lg:px-0">
+            <h6 class="mb-4 font-title text-4xl md:text-center lg:text-left">
+              Loka Bali
+            </h6>
+            <div class="line-pattern mx-auto lg:ml-7 mb-10"></div>
+            <p
+              class="-mt-5 text-sm md:text-base md:text-center lg:text-left font-body"
             >
-              <div class="flex flex-col">
-                <div class="mt-10 md:mt-5">
-                  <h6
-                    class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
-                  >
-                    Contribute With Us
-                  </h6>
-                  <p class="mb-4">
-                    <a href="#!" class="text-emerald-50">Become Partner</a>
-                  </p>
-                  <p class="mb-4">
-                    <a href="#!" class="text-emerald-50">Business Partner</a>
-                  </p>
-                  <p class="mb-4">
-                    <a href="#!" class="text-emerald-50">Event</a>
-                  </p>
-                </div>
-                <div class="mt-5">
-                  <h6
-                    class="font-semibold font-subtitle mb-4 flex justify-center md:justify-start text-2xl"
-                  >
-                    Useful Links
-                  </h6>
-  
-                  <p class="mb-4">
-                    <a href="/#services" class="text-emerald-50"
-                      >Top Destination</a
-                    >
-                  </p>
-                  <p class="mb-4">
-                    <a href="/#destinations" class="text-emerald-50"
-                      >Top Activities</a
-                    >
-                  </p>
-                  <p class="mb-4">
-                    <a href="/#tour-packages" class="text-emerald-50"
-                      >Travel Tips</a
-                    >
-                  </p>
-                </div>
+              Connect you to the best authentic experiences in Bali. Finding
+              Hidden Gems, Local Culture, and Adventure.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row basis-1/2 lg:justify-between md:justify-around md:mt-10"
+          >
+            <div class="flex flex-col">
+              <div class="mt-10 md:mt-5">
+                <h6
+                  class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
+                >
+                  Contribute With Us
+                </h6>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Become Partner</a>
+                </p>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Business Partner</a>
+                </p>
+                <p class="mb-4">
+                  <a href="#!" class="text-emerald-50">Event</a>
+                </p>
               </div>
-              <div class="flex flex-col md:flex-col">
-                <div class="mt-5">
-                  <h6
-                    class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
+              <div class="mt-5">
+                <h6
+                  class="font-semibold font-subtitle mb-4 flex justify-center md:justify-start text-2xl"
+                >
+                  Useful Links
+                </h6>
+
+                <p class="mb-4">
+                  <a href="/#services" class="text-emerald-50"
+                    >Top Destination</a
                   >
-                    Social Media
-                  </h6>
-                  <p class="mb-4">
-                    <a
-                      href="https://instagram.com/balidriverputu?igshid=ZDdkNTZiNTM="
-                      class="text-emerald-50"
-                      target="_blank"
-                      ><i class="bi bi-instagram mr-1"></i> loka.bali</a
-                    >
-                  </p>
-                  <p class="mb-4">
-                    <a
-                      href="https://www.facebook.com/putu.balidriver.3?mibextid=ZbWKwL"
-                      class="text-emerald-50"
-                      target="_blank"
-                    >
-                      <i class="bi bi-facebook mr-1"></i> Loka Bali</a
-                    >
-                  </p>
-                  <p class="mb-4 block">
-                    <a
-                      href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
-                      class="text-emerald-50 flex justify-center md:justify-start"
-                      target="_blank"
-                    >
-                      <i class="bi bi-twitter-x mr-1"></i>
-                      @loka-bali
-                    </a>
-                  </p>
-                  <p class="mb-4 block">
-                    <a
-                      href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
-                      class="text-emerald-50 flex justify-center md:justify-start"
-                      target="_blank"
-                    >
-                      <i class="bi bi-threads mr-1"></i>
-                      @loka.bali
-                    </a>
-                  </p>
-                </div>
-                <div class="mt-5 text-emerald-50">
-                  <h6
-                    class="font-semibold mb-4 flex justify-center md:justify-start text-2xl text-white"
+                </p>
+                <p class="mb-4">
+                  <a href="/#destinations" class="text-emerald-50"
+                    >Top Activities</a
                   >
-                    Contact
-                  </h6>
-                  <p class="mb-4">
-                    <a href="mailto:darma_eka89@yahoo.co.id" class="">
-                      <i class="icofont-email"></i> hi@loka-bali.com</a
-                    >
-                  </p>
-                  <p class="mb-4">
-                    <a href="https://wa.me/6285888821190" class="">
-                      <i class="icofont-whatsapp"></i> +62-858-8882-1190 (Sarah)
-                    </a>
-                  </p>
-                  <p class="mb-4">
-                    <a href="https://wa.me/6285737691010" class="">
-                      <i class="icofont-whatsapp"></i>
-                      +62-857-3769-1010 (Putu)
-                    </a>
-                  </p>
-                </div>
+                </p>
+                <p class="mb-4">
+                  <a href="/#tour-packages" class="text-emerald-50"
+                    >Travel Tips</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-col">
+              <div class="mt-5">
+                <h6
+                  class="font-subtitle font-semibold mb-4 flex justify-center md:justify-start text-2xl"
+                >
+                  Social Media
+                </h6>
+                <p class="mb-4">
+                  <a
+                    href="https://instagram.com/balidriverputu?igshid=ZDdkNTZiNTM="
+                    class="text-emerald-50"
+                    target="_blank"
+                    ><i class="bi bi-instagram mr-1"></i> loka.bali</a
+                  >
+                </p>
+                <p class="mb-4">
+                  <a
+                    href="https://www.facebook.com/putu.balidriver.3?mibextid=ZbWKwL"
+                    class="text-emerald-50"
+                    target="_blank"
+                  >
+                    <i class="bi bi-facebook mr-1"></i> Loka Bali</a
+                  >
+                </p>
+                <p class="mb-4 block">
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
+                    class="text-emerald-50 flex justify-center md:justify-start"
+                    target="_blank"
+                  >
+                    <i class="bi bi-twitter-x mr-1"></i>
+                    @loka-bali
+                  </a>
+                </p>
+                <p class="mb-4 block">
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Review-g297697-d25288635-Reviews-My_Tour_Bali-Kuta_Kuta_District_Bali.html"
+                    class="text-emerald-50 flex justify-center md:justify-start"
+                    target="_blank"
+                  >
+                    <i class="bi bi-threads mr-1"></i>
+                    @loka.bali
+                  </a>
+                </p>
+              </div>
+              <div class="mt-5 text-emerald-50">
+                <h6
+                  class="font-semibold mb-4 flex justify-center md:justify-start text-2xl text-white"
+                >
+                  Contact
+                </h6>
+                <p class="mb-4">
+                  <a href="mailto:darma_eka89@yahoo.co.id" class="">
+                    <i class="icofont-email"></i> hi@loka-bali.com</a
+                  >
+                </p>
+                <p class="mb-4">
+                  <a href="https://wa.me/6285888821190" class="">
+                    <i class="icofont-whatsapp"></i> +62-858-8882-1190 (Sarah)
+                  </a>
+                </p>
+                <p class="mb-4">
+                  <a href="https://wa.me/6285737691010" class="">
+                    <i class="icofont-whatsapp"></i>
+                    +62-857-3769-1010 (Putu)
+                  </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="text-center p-6 bg-emerald-950 line border-t-2 border-emerald-100 text-base"
-        >
-          <span>© 2024 Copyright:</span>
-          <a class="text-emerald-600 font-semibold" href="/">Loka Bali</a>
-        </div>
-      </footer>
-      <!-- end footer -->
+      </div>
+      <div
+        class="text-center p-6 bg-emerald-950 line border-t-2 border-emerald-100 text-base"
+      >
+        <span>© 2024 Copyright:</span>
+        <a class="text-emerald-600 font-semibold" href="/">Loka Bali</a>
+      </div>
+    </footer>
+    <!-- end footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

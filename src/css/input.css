@@ -59,6 +59,10 @@
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
 }
 
+.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
