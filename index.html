@@ -617,16 +617,19 @@
         <img
           src="src/img/campuhan-ridge-walk.webp"
           alt=""
+          loading="eager"
           class="absolute w-60 z-40 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:scale-110 transition ease-in duration-300 cursor-pointer drop-shadow-2xl"
         />
         <img
           src="src/img/homedes/over1.webp"
           alt=""
+          loading="eager"
           class="absolute w-60 bottom-0 left-0 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:z-50 hover:scale-110 transition ease-in duration-300 cursor-pointer hover:drop-shadow-2xl"
         />
         <img
           src="src/img/homedes/over2.webp"
           alt=""
+          loading="eager"
           class="absolute w-60 top-0 right-0 rounded-lg md:w-48 lg:w-64 xl:w-96 hover:z-50 hover:scale-110 transition ease-in duration-300 cursor-pointer hover:drop-shadow-2xl"
         />
       </div>
@@ -754,7 +757,9 @@
       >
         <div class="swiper-wrapper">
           <template x-for="eat in eats" :key="eat.id">
-            <div class="swiper-slide cursor-pointer mb-10 rounded-lg group">
+            <div
+              class="swiper-slide cursor-pointer mb-10 rounded-lg group overflow-hidden"
+            >
               <div
                 data-aos="fade-up"
                 :data-aos-duration="eat.dur"
@@ -763,9 +768,11 @@
                 <img
                   :src="eat.img"
                   alt=""
-                  class="rounded-t-lg w-full h-48 object-cover"
+                  class="rounded-t-lg w-full h-48 object-cover group-hover:scale-105 transition-all duration-300 ease-in-out"
                 />
-                <div class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 xl:pb-7">
+                <div
+                  class="px-3 pt-3 pb-5 xl:py-4 xl:pt-4 border-2 border-t-0 rounded-b-lg xl:pb-7"
+                >
                   <div
                     class="text-sm text-body font-light"
                     x-html="eat.clock"
@@ -857,7 +864,8 @@
           href="blog.html"
           class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group"
           data-aos="fade-up"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
+          data-aos-delay="150"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -888,7 +896,8 @@
           href="blog.html"
           class="col-span-12 row-span-4 md:row-span-4 lg:row-span-5 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
+          data-aos-delay="300"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -916,10 +925,11 @@
           />
         </a>
         <a
-          href=""
+          href="blog.html"
           class="col-span-12 row-span-4 md:row-span-8 md:col-span-6 lg:row-span-7 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
           data-aos="fade-up"
-          data-aos-duration="2500"
+          data-aos-duration="1000"
+          data-aos-delay="450"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -947,10 +957,11 @@
           />
         </a>
         <a
-          href=""
+          href="blog.html"
           class="col-span-12 row-span-4 md:row-span-4 lg:row-span-7 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden hidden md:block relative group"
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="1000"
+          data-aos-delay="600"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
@@ -978,10 +989,11 @@
           />
         </a>
         <a
-          href=""
+          href="blog.html"
           class="col-span-12 row-span-4 md:row-span-4 md:col-span-6 lg:col-span-4 rounded-xl overflow-hidden relative group"
           data-aos="fade-up"
-          data-aos-duration="2400"
+          data-aos-duration="1000"
+          data-aos-delay="750"
         >
           <div
             class="absolute text-black bg-white bottom-0 z-10 w-full f px-3 py-2"
